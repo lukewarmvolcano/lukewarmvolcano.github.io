@@ -10,25 +10,143 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.lukewarmvolcano.com/clients/">
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<script src="../image-slot.js"></script>
 <style>
+  *{box-sizing:border-box;}
   body{margin:0;background:#0d0b0a;color:#f5efe8;font-family:'Inter',sans-serif;}
   a{color:#ff5a1f;}
   a:hover{color:#ffb37a;}
-  .wrap{max-width:760px;margin:0 auto;padding:64px 24px 96px;}
-  h1{font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:clamp(34px,6vw,56px);text-transform:uppercase;line-height:1.05;margin:16px 0 24px;}
+  .h1{font-family:'Big Shoulders Display',sans-serif;font-weight:900;text-transform:uppercase;line-height:1.02;}
+  .h2{font-family:'Big Shoulders Display',sans-serif;font-weight:800;text-transform:uppercase;line-height:1.05;}
   .kicker{font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#a89b93;}
   .kicker span{color:#ff5a1f;}
-  p{font-size:17px;line-height:1.75;color:#c9beb5;}
-  .cta{display:inline-block;margin-top:32px;padding:16px 32px;background:#ff5a1f;color:#0d0b0a;border-radius:999px;font-weight:800;text-decoration:none;}
-  .back{display:inline-block;margin-top:20px;font-weight:700;font-size:14px;}
+  p{font-size:16.5px;line-height:1.75;color:#c9beb5;}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 clamp(20px,6vw,56px);}
+  header.site{position:sticky;top:0;z-index:10;background:rgba(13,11,10,0.92);backdrop-filter:blur(8px);border-bottom:1px solid rgba(245,239,232,0.08);}
+  header.site .bar{display:flex;align-items:center;justify-content:space-between;padding:20px clamp(20px,6vw,56px);max-width:1100px;margin:0 auto;gap:20px;flex-wrap:wrap;}
+  header.site .logo{font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:20px;text-decoration:none;color:#f5efe8;}
+  header.site .logo span{color:#ff5a1f;}
+  nav.links{display:flex;gap:24px;flex-wrap:wrap;}
+  footer.site{border-top:1px solid rgba(245,239,232,0.08);padding:40px clamp(20px,6vw,56px);text-align:center;color:#a89b93;font-size:13.5px;}
+  details summary::-webkit-details-marker{display:none;} .client-grid{grid-template-columns:repeat(6,1fr);} @media(max-width:900px){.client-grid{grid-template-columns:repeat(3,1fr);}} @media(max-width:520px){.client-grid{grid-template-columns:repeat(2,1fr);}}
 </style>
 </head><body>
-<div class="wrap">
-  <div class="kicker">Lukewarm Volcano &middot; <span>Video Production, Kilrush, Co. Clare</span></div>
-  <h1>Clients Across Clare & Beyond</h1>
-  <p>Lukewarm Volcano has worked with businesses, brands, and organisations across County Clare and further afield, including Claddagh Jewellers, JJ Corry, The Cliffs of Moher Experience, and AVEA.</p>
-<p>Every project gets David's full attention, with cinematic quality on a local-studio budget and timeline, and one point of contact from concept to final cut.</p>
-  <a class="cta" href="https://www.lukewarmvolcano.com/#clients">View Full Site &rarr;</a>
-  <br><a class="back" href="https://www.lukewarmvolcano.com/#clients">&larr; Back to Home</a>
-</div>
+<header class="site">
+  <div class="bar">
+    <a class="logo" href="https://www.lukewarmvolcano.com/">LUKEWARM <span>VOLCANO</span></a>
+    <nav class="links"><a href="https://www.lukewarmvolcano.com/" style="color:#f5efe8;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:0.5px;text-decoration:none;">Home</a><a href="https://www.lukewarmvolcano.com/about/" style="color:#f5efe8;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:0.5px;text-decoration:none;">About</a><a href="https://www.lukewarmvolcano.com/videos/" style="color:#f5efe8;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:0.5px;text-decoration:none;">Work</a><a href="https://www.lukewarmvolcano.com/services/" style="color:#f5efe8;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:0.5px;text-decoration:none;">Services</a><a href="https://www.lukewarmvolcano.com/clients/" style="color:#ff5a1f;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:0.5px;text-decoration:none;">Clients</a><a href="https://www.lukewarmvolcano.com/contact/" style="color:#f5efe8;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:0.5px;text-decoration:none;">Contact</a></nav>
+  </div>
+</header>
+
+<section style="padding:64px 0 24px;text-align:center;">
+  <div class="wrap">
+    <div class="kicker">Lukewarm Volcano &middot; <span>Trusted By</span></div>
+    <h1 class="h1" style="font-size:clamp(36px,6vw,56px);margin:16px 0 16px;">Clients Across Clare &amp; Beyond</h1>
+    <p style="max-width:620px;margin:0 auto;">From family bakeries to national tourism bodies, every client gets the same care and attention. Click a logo to read more about each one.</p>
+  </div>
+</section>
+<section class="wrap" style="padding-bottom:80px;">
+  <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:16px;" class="client-grid">
+    
+  <details style="border-radius:14px;background:#171110;border:1px solid rgba(245,239,232,0.1);overflow:hidden;">
+    <summary style="list-style:none;cursor:pointer;height:88px;display:flex;align-items:center;justify-content:center;padding:16px;background:rgba(245,239,232,0.03) url('https://static.wixstatic.com/media/050372_e37e1928fc91415c9ef2e75e7a94877e~mv2.webp/v1/fill/w_270,h_220,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Claddagh%20Logo%20FINAL.webp') center / contain no-repeat;filter:grayscale(1) brightness(1.6);opacity:0.8;"></summary>
+    <div style="padding:18px 20px 22px;border-top:1px solid rgba(245,239,232,0.08);">
+      <div style="font-weight:800;font-size:15px;margin-bottom:8px;">Claddagh Jewellers</div>
+      <p style="font-size:13.5px;margin:0 0 12px;">A Galway City jewellers — we produced a product-style video highlighting the quality, tradition, and craftsmanship behind their pieces. A pleasure to shoot something so detail-driven.</p>
+      <a href="https://www.lukewarmvolcano.com/videos/" target="_blank" rel="noopener" style="font-weight:700;font-size:13px;">Visit Website / Social &rarr;</a>
+    </div>
+  </details>
+  <details style="border-radius:14px;background:#171110;border:1px solid rgba(245,239,232,0.1);overflow:hidden;">
+    <summary style="list-style:none;cursor:pointer;height:88px;display:flex;align-items:center;justify-content:center;padding:16px;background:rgba(245,239,232,0.03) url('https://static.wixstatic.com/media/050372_29a6d5f8e2b84ed8b802845907fb5643~mv2.webp/v1/fill/w_202,h_198,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/JJ%20Corry%20Logo%20FINAL.webp') center / contain no-repeat;filter:grayscale(1) brightness(1.6);opacity:0.8;"></summary>
+    <div style="padding:18px 20px 22px;border-top:1px solid rgba(245,239,232,0.08);">
+      <div style="font-weight:800;font-size:15px;margin-bottom:8px;">JJ Corry</div>
+      <p style="font-size:13.5px;margin:0 0 12px;">An independent Irish whiskey bottler based in County Clare. Great to work with a brand that cares as much about craft and story as we do.</p>
+      <a href="https://www.jjcorry.com/" target="_blank" rel="noopener" style="font-weight:700;font-size:13px;">Visit Website / Social &rarr;</a>
+    </div>
+  </details>
+  <details style="border-radius:14px;background:#171110;border:1px solid rgba(245,239,232,0.1);overflow:hidden;">
+    <summary style="list-style:none;cursor:pointer;height:88px;display:flex;align-items:center;justify-content:center;padding:16px;background:rgba(245,239,232,0.03) url('https://static.wixstatic.com/media/050372_cf88f94865ab4a82a61f0a6e3b9c8295~mv2.webp/v1/fill/w_188,h_188,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Cliffs%20of%20Moher%20logo%20FINAL.webp') center / contain no-repeat;filter:grayscale(1) brightness(1.6);opacity:0.8;"></summary>
+    <div style="padding:18px 20px 22px;border-top:1px solid rgba(245,239,232,0.08);">
+      <div style="font-weight:800;font-size:15px;margin-bottom:8px;">Cliffs of Moher Experience</div>
+      <p style="font-size:13.5px;margin:0 0 12px;">One of Ireland's biggest visitor attractions. We've made sustainability-focused videos and content promoting online bookings — always a pleasure working with their team.</p>
+      <a href="https://www.lukewarmvolcano.com/videos/" target="_blank" rel="noopener" style="font-weight:700;font-size:13px;">Visit Website / Social &rarr;</a>
+    </div>
+  </details>
+  <details style="border-radius:14px;background:#171110;border:1px solid rgba(245,239,232,0.1);overflow:hidden;">
+    <summary style="list-style:none;cursor:pointer;height:88px;display:flex;align-items:center;justify-content:center;padding:16px;background:rgba(245,239,232,0.03) url('https://static.wixstatic.com/media/050372_a7ab814dba3340afb2dc38d08ab32697~mv2.webp/v1/fill/w_248,h_220,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Qualibuild%20-%20Logo%20FINAL.webp') center / contain no-repeat;filter:grayscale(1) brightness(1.6);opacity:0.8;"></summary>
+    <div style="padding:18px 20px 22px;border-top:1px solid rgba(245,239,232,0.08);">
+      <div style="font-weight:800;font-size:15px;margin-bottom:8px;">Qualibuild</div>
+      <p style="font-size:13.5px;margin:0 0 12px;">A construction and building company based in Clare — straightforward, professional, and great to collaborate with on-site.</p>
+      <a href="http://www.qualibuild.ie/" target="_blank" rel="noopener" style="font-weight:700;font-size:13px;">Visit Website / Social &rarr;</a>
+    </div>
+  </details>
+  <details style="border-radius:14px;background:#171110;border:1px solid rgba(245,239,232,0.1);overflow:hidden;">
+    <summary style="list-style:none;cursor:pointer;height:88px;display:flex;align-items:center;justify-content:center;padding:16px;background:rgba(245,239,232,0.03) url('https://static.wixstatic.com/media/050372_2a5dddf5f4df4dfeac721388bf19b403~mv2.webp/v1/fill/w_332,h_156,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Hemp%20higher%20Yoga%20Logo.webp') center / contain no-repeat;filter:grayscale(1) brightness(1.6);opacity:0.8;"></summary>
+    <div style="padding:18px 20px 22px;border-top:1px solid rgba(245,239,232,0.08);">
+      <div style="font-weight:800;font-size:15px;margin-bottom:8px;">Hemp Higher Yoga</div>
+      <p style="font-size:13.5px;margin:0 0 12px;">A wellness and yoga studio bringing calm, considered energy to every shoot — a genuinely lovely brand to work alongside.</p>
+      <a href="https://hemphigheryoga.ie/" target="_blank" rel="noopener" style="font-weight:700;font-size:13px;">Visit Website / Social &rarr;</a>
+    </div>
+  </details>
+  <details style="border-radius:14px;background:#171110;border:1px solid rgba(245,239,232,0.1);overflow:hidden;">
+    <summary style="list-style:none;cursor:pointer;height:88px;display:flex;align-items:center;justify-content:center;padding:16px;background:rgba(245,239,232,0.03) url('https://static.wixstatic.com/media/050372_9f6ebdb0aca84d82a551c0f212518168~mv2.webp/v1/fill/w_306,h_132,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/AVEA%20Full%20logo.webp') center / contain no-repeat;filter:grayscale(1) brightness(1.6);opacity:0.8;"></summary>
+    <div style="padding:18px 20px 22px;border-top:1px solid rgba(245,239,232,0.08);">
+      <div style="font-weight:800;font-size:15px;margin-bottom:8px;">AVEA</div>
+      <p style="font-size:13.5px;margin:0 0 12px;">Ireland's Association of Visitor Experiences & Attractions. We produced their conference promo video, filmed at locations across County Clare.</p>
+      <a href="https://www.lukewarmvolcano.com/videos/" target="_blank" rel="noopener" style="font-weight:700;font-size:13px;">Visit Website / Social &rarr;</a>
+    </div>
+  </details>
+  <details style="border-radius:14px;background:#171110;border:1px solid rgba(245,239,232,0.1);overflow:hidden;">
+    <summary style="list-style:none;cursor:pointer;height:88px;display:flex;align-items:center;justify-content:center;padding:16px;background:rgba(245,239,232,0.03) url('https://static.wixstatic.com/media/050372_f73af3998c904af880f52a68c93d7c0d~mv2.webp/v1/fill/w_284,h_166,al_c,lg_1,q_80,enc_avif,quality_auto/FTB-white-1.webp') center / contain no-repeat;filter:grayscale(1) brightness(1.6);opacity:0.8;"></summary>
+    <div style="padding:18px 20px 22px;border-top:1px solid rgba(245,239,232,0.08);">
+      <div style="font-weight:800;font-size:15px;margin-bottom:8px;">Feel The Burren</div>
+      <p style="font-size:13.5px;margin:0 0 12px;">A tourism initiative showcasing the Burren region — a great excuse to film some of the most striking landscapes in Clare.</p>
+      <a href="https://www.feeltheburren.ie/" target="_blank" rel="noopener" style="font-weight:700;font-size:13px;">Visit Website / Social &rarr;</a>
+    </div>
+  </details>
+  <details style="border-radius:14px;background:#171110;border:1px solid rgba(245,239,232,0.1);overflow:hidden;">
+    <summary style="list-style:none;cursor:pointer;height:88px;display:flex;align-items:center;justify-content:center;padding:16px;background:rgba(245,239,232,0.03) url('https://static.wixstatic.com/media/050372_2d2d67b5ecf24d8094169b053aa010ad~mv2.webp/v1/fill/w_246,h_138,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/MHRA%20Logo%20FINAL.webp') center / contain no-repeat;filter:grayscale(1) brightness(1.6);opacity:0.8;"></summary>
+    <div style="padding:18px 20px 22px;border-top:1px solid rgba(245,239,232,0.08);">
+      <div style="font-weight:800;font-size:15px;margin-bottom:8px;">MHRA</div>
+      <p style="font-size:13.5px;margin:0 0 12px;">A trusted local partner — always a smooth, professional collaboration from brief to delivery.</p>
+      <a href="https://mhra.ie/" target="_blank" rel="noopener" style="font-weight:700;font-size:13px;">Visit Website / Social &rarr;</a>
+    </div>
+  </details>
+  <details style="border-radius:14px;background:#171110;border:1px solid rgba(245,239,232,0.1);overflow:hidden;">
+    <summary style="list-style:none;cursor:pointer;height:88px;display:flex;align-items:center;justify-content:center;padding:16px;background:rgba(245,239,232,0.03) url('https://static.wixstatic.com/media/050372_95e5e2bf95b847f789c4ca97b08bf7bc~mv2.webp/v1/fill/w_202,h_178,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/considines%20logo%20FINAL.webp') center / contain no-repeat;filter:grayscale(1) brightness(1.6);opacity:0.8;"></summary>
+    <div style="padding:18px 20px 22px;border-top:1px solid rgba(245,239,232,0.08);">
+      <div style="font-weight:800;font-size:15px;margin-bottom:8px;">Considine's Bakery</div>
+      <p style="font-size:13.5px;margin:0 0 12px;">A well-loved local bakery in Clare — full of character, and great fun to film.</p>
+      <a href="https://www.facebook.com/considinesbakery/" target="_blank" rel="noopener" style="font-weight:700;font-size:13px;">Visit Website / Social &rarr;</a>
+    </div>
+  </details>
+  <details style="border-radius:14px;background:#171110;border:1px solid rgba(245,239,232,0.1);overflow:hidden;">
+    <summary style="list-style:none;cursor:pointer;height:88px;display:flex;align-items:center;justify-content:center;padding:16px;background:rgba(245,239,232,0.03) url('https://static.wixstatic.com/media/050372_006fbc3d4be6463b852d8f18a9148eee~mv2.webp/v1/fill/w_362,h_198,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Johnsons%20Logo%20FINAL.webp') center / contain no-repeat;filter:grayscale(1) brightness(1.6);opacity:0.8;"></summary>
+    <div style="padding:18px 20px 22px;border-top:1px solid rgba(245,239,232,0.08);">
+      <div style="font-weight:800;font-size:15px;margin-bottom:8px;">Johnson's Bar</div>
+      <p style="font-size:13.5px;margin:0 0 12px;">A well-known Kilrush pub with plenty of atmosphere — a great local venue to capture on camera.</p>
+      <a href="https://www.facebook.com/Johnsons-Bar-Kilrush-2095397207451139" target="_blank" rel="noopener" style="font-weight:700;font-size:13px;">Visit Website / Social &rarr;</a>
+    </div>
+  </details>
+  <details style="border-radius:14px;background:#171110;border:1px solid rgba(245,239,232,0.1);overflow:hidden;">
+    <summary style="list-style:none;cursor:pointer;height:88px;display:flex;align-items:center;justify-content:center;padding:16px;background:rgba(245,239,232,0.03) url('https://static.wixstatic.com/media/050372_524c97b465bd40828a286a4670a8a512~mv2.webp/v1/fill/w_394,h_118,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/West%20Coast%20Aqua%20Park%20-%20Logo%20FINAL.webp') center / contain no-repeat;filter:grayscale(1) brightness(1.6);opacity:0.8;"></summary>
+    <div style="padding:18px 20px 22px;border-top:1px solid rgba(245,239,232,0.08);">
+      <div style="font-weight:800;font-size:15px;margin-bottom:8px;">West Coast Aqua Park</div>
+      <p style="font-size:13.5px;margin:0 0 12px;">Kilrush's floating water park — high energy, fast-paced, and a fun one to shoot for action and promo content.</p>
+      <a href="https://westcoastaquapark.ie/kilrush/" target="_blank" rel="noopener" style="font-weight:700;font-size:13px;">Visit Website / Social &rarr;</a>
+    </div>
+  </details>
+  <details style="border-radius:14px;background:#171110;border:1px solid rgba(245,239,232,0.1);overflow:hidden;">
+    <summary style="list-style:none;cursor:pointer;height:88px;display:flex;align-items:center;justify-content:center;padding:16px;background:rgba(245,239,232,0.03) url('https://static.wixstatic.com/media/050372_84f9cce986394a3bb8f7ee241fd1c1e4~mv2.webp/v1/fill/w_214,h_146,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Loop%20Head%20Together%20-%20Logo.webp') center / contain no-repeat;filter:grayscale(1) brightness(1.6);opacity:0.8;"></summary>
+    <div style="padding:18px 20px 22px;border-top:1px solid rgba(245,239,232,0.08);">
+      <div style="font-weight:800;font-size:15px;margin-bottom:8px;">Loop Head Together</div>
+      <p style="font-size:13.5px;margin:0 0 12px;">A community sustainability project on the Loop Head peninsula. We filmed the launch video for their Sceene EIP biochar soil event.</p>
+      <a href="https://www.lukewarmvolcano.com/videos/" target="_blank" rel="noopener" style="font-weight:700;font-size:13px;">Visit Website / Social &rarr;</a>
+    </div>
+  </details>
+  </div>
+</section>
+<footer class="site">
+  Lukewarm Volcano &middot; Kilrush, Co. Clare &middot; <a href="tel:0834704688">083-4704-688</a> &middot; <a href="mailto:david@lukewarmvolcano.com">david@lukewarmvolcano.com</a>
+</footer>
 </body></html>
