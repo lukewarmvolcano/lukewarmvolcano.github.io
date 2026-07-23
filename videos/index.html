@@ -22,22 +22,43 @@
   .kicker span{color:#ff5a1f;}
   p{font-size:16.5px;line-height:1.75;color:#c9beb5;}
   .wrap{max-width:1100px;margin:0 auto;padding:0 clamp(20px,6vw,56px);}
-  header.site{position:sticky;top:0;z-index:10;background:rgba(13,11,10,0.92);backdrop-filter:blur(8px);border-bottom:1px solid rgba(245,239,232,0.08);}
-  header.site .bar{display:flex;align-items:center;justify-content:space-between;padding:20px clamp(20px,6vw,56px);max-width:1100px;margin:0 auto;gap:20px;flex-wrap:wrap;}
-  header.site .logo{font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:20px;text-decoration:none;color:#f5efe8;}
-  header.site .logo span{color:#ff5a1f;}
-  nav.links{display:flex;gap:24px;flex-wrap:wrap;}
   footer.site{border-top:1px solid rgba(245,239,232,0.08);padding:40px clamp(20px,6vw,56px);text-align:center;color:#a89b93;font-size:13.5px;}
+  
+  @media (max-width:860px){
+    .lv-nav-links{display:none !important;}
+    .lv-mobile-toggle{display:flex !important;}
+  }
+
   
 </style>
 </head><body>
-<header class="site">
-  <div class="bar">
-    <a class="logo" href="https://www.lukewarmvolcano.com/">LUKEWARM <span>VOLCANO</span></a>
-    <nav class="links"><a href="https://www.lukewarmvolcano.com/" style="color:#f5efe8;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:0.5px;text-decoration:none;">Home</a><a href="https://www.lukewarmvolcano.com/about/" style="color:#f5efe8;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:0.5px;text-decoration:none;">About</a><a href="https://www.lukewarmvolcano.com/videos/" style="color:#ff5a1f;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:0.5px;text-decoration:none;">Work</a><a href="https://www.lukewarmvolcano.com/services/" style="color:#f5efe8;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:0.5px;text-decoration:none;">Services</a><a href="https://www.lukewarmvolcano.com/clients/" style="color:#f5efe8;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:0.5px;text-decoration:none;">Clients</a><a href="https://www.lukewarmvolcano.com/contact/" style="color:#f5efe8;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:0.5px;text-decoration:none;">Contact</a></nav>
+<header style="position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:22px clamp(20px,6vw,56px);background:rgba(13,11,10,0.85);backdrop-filter:blur(10px);border-bottom:1px solid rgba(245,239,232,0.08);">
+    <a href="https://www.lukewarmvolcano.com/" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
+      <img src="https://static.wixstatic.com/media/050372_ad2abc28483145edbaf309be82de1d1d~mv2.png" alt="Lukewarm Volcano logo" style="height:44px;width:auto;display:block;"/>
+      <div style="font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:22px;line-height:0.9;letter-spacing:0.5px;color:#f5efe8;">LUKEWARM<br/><span style="color:#ff5a1f;">VOLCANO</span></div>
+    </a>
+    <nav class="lv-nav-links" style="display:flex;align-items:center;gap:36px;">
+      <a href="https://www.lukewarmvolcano.com/videos/" style="color:#ff5a1f;font-weight:600;font-size:15px;text-decoration:none;">Videos</a>
+      <a href="https://www.lukewarmvolcano.com/services/" style="color:#f5efe8;font-weight:600;font-size:15px;text-decoration:none;">Services</a>
+      <a href="https://www.lukewarmvolcano.com/clients/" style="color:#f5efe8;font-weight:600;font-size:15px;text-decoration:none;">Clients</a>
+      <a href="https://www.lukewarmvolcano.com/about/" style="color:#f5efe8;font-weight:600;font-size:15px;text-decoration:none;">About</a>
+      <a href="https://www.lukewarmvolcano.com/contact/" style="padding:12px 26px;background:#ff5a1f;color:#0d0b0a;border-radius:999px;font-weight:800;font-size:14px;text-decoration:none;">Get a Free Quote</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:14px;">
+      <a href="https://www.lukewarmvolcano.com/contact/" class="lv-mobile-toggle" style="display:none;padding:10px 20px;background:#ff5a1f;color:#0d0b0a;border-radius:999px;font-weight:800;font-size:13px;white-space:nowrap;text-decoration:none;">Quote</a>
+      <button id="lvMobileBtn" class="lv-mobile-toggle" style="display:none;background:none;border:1px solid rgba(245,239,232,0.3);border-radius:10px;width:44px;height:44px;align-items:center;justify-content:center;color:#f5efe8;cursor:pointer;flex-direction:column;gap:4px;">
+        <span style="width:18px;height:2px;background:#f5efe8;display:block;"></span>
+        <span style="width:18px;height:2px;background:#f5efe8;display:block;"></span>
+      </button>
+    </div>
+  </header>
+  <div id="lvMobileMenu" style="display:none;background:#0d0b0a;border-bottom:1px solid rgba(245,239,232,0.08);flex-direction:column;padding:8px clamp(20px,6vw,56px) 20px;">
+    <a href="https://www.lukewarmvolcano.com/videos/" style="padding:16px 0;color:#ff5a1f;font-weight:600;font-size:17px;border-bottom:1px solid rgba(245,239,232,0.08);text-decoration:none;">Videos</a>
+      <a href="https://www.lukewarmvolcano.com/services/" style="padding:16px 0;color:#f5efe8;font-weight:600;font-size:17px;border-bottom:1px solid rgba(245,239,232,0.08);text-decoration:none;">Services</a>
+      <a href="https://www.lukewarmvolcano.com/clients/" style="padding:16px 0;color:#f5efe8;font-weight:600;font-size:17px;border-bottom:1px solid rgba(245,239,232,0.08);text-decoration:none;">Clients</a>
+      <a href="https://www.lukewarmvolcano.com/about/" style="padding:16px 0;color:#f5efe8;font-weight:600;font-size:17px;border-bottom:1px solid rgba(245,239,232,0.08);text-decoration:none;">About</a>
+    <a href="https://www.lukewarmvolcano.com/contact/" style="padding:16px 0;color:#f5efe8;font-weight:600;font-size:17px;text-decoration:none;">Contact</a>
   </div>
-</header>
-
 <section style="padding:64px 0 24px;text-align:center;">
   <div class="wrap">
     <div class="kicker">Lukewarm Volcano &middot; <span>Recent Eruptions</span></div>
@@ -86,16 +107,135 @@
   </div>
   </div>
 </section>
+<section class="wrap" style="padding-bottom:24px;">
+  <div style="text-align:center;max-width:600px;margin:0 auto 32px;">
+    <div class="kicker">Lukewarm Volcano &middot; <span>More From The Reel</span></div>
+    <h2 class="h2" style="font-size:32px;margin:14px 0 0;">Further Work</h2>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px;">
+    
+  <div style="border-radius:18px;overflow:hidden;background:#171110;border:1px solid rgba(245,239,232,0.1);">
+    <div class="vwrap" data-video-id="bc_ElC2XIyI" style="aspect-ratio:16/9;position:relative;cursor:pointer;background-image:url('https://i.ytimg.com/vi/bc_ElC2XIyI/hqdefault.jpg');background-size:cover;background-position:center;">
+      <div style="position:absolute;inset:0;background:rgba(13,11,10,0.3);display:flex;align-items:center;justify-content:center;">
+        <div style="width:56px;height:56px;border-radius:50%;background:#ff5a1f;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-top:11px solid transparent;border-bottom:11px solid transparent;border-left:17px solid #0d0b0a;margin-left:4px;"></div></div>
+      </div>
+    </div>
+    <div style="padding:20px 24px;display:flex;align-items:center;justify-content:space-between;">
+      <span style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:6px 12px;border:1px solid rgba(245,239,232,0.2);border-radius:999px;color:#c9beb5;">More Work</span>
+      <a href="https://youtu.be/bc_ElC2XIyI" target="_blank" rel="noopener" style="font-weight:700;font-size:13px;">Open on YouTube &rarr;</a>
+    </div>
+  </div>
+  <div style="border-radius:18px;overflow:hidden;background:#171110;border:1px solid rgba(245,239,232,0.1);">
+    <div class="vwrap" data-video-id="XHW7um1V8VY" style="aspect-ratio:16/9;position:relative;cursor:pointer;background-image:url('https://i.ytimg.com/vi/XHW7um1V8VY/hqdefault.jpg');background-size:cover;background-position:center;">
+      <div style="position:absolute;inset:0;background:rgba(13,11,10,0.3);display:flex;align-items:center;justify-content:center;">
+        <div style="width:56px;height:56px;border-radius:50%;background:#ff5a1f;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-top:11px solid transparent;border-bottom:11px solid transparent;border-left:17px solid #0d0b0a;margin-left:4px;"></div></div>
+      </div>
+    </div>
+    <div style="padding:20px 24px;display:flex;align-items:center;justify-content:space-between;">
+      <span style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:6px 12px;border:1px solid rgba(245,239,232,0.2);border-radius:999px;color:#c9beb5;">More Work</span>
+      <a href="https://youtu.be/XHW7um1V8VY" target="_blank" rel="noopener" style="font-weight:700;font-size:13px;">Open on YouTube &rarr;</a>
+    </div>
+  </div>
+  <div style="border-radius:18px;overflow:hidden;background:#171110;border:1px solid rgba(245,239,232,0.1);">
+    <div class="vwrap" data-video-id="wvxvDLACUuA" style="aspect-ratio:16/9;position:relative;cursor:pointer;background-image:url('https://i.ytimg.com/vi/wvxvDLACUuA/hqdefault.jpg');background-size:cover;background-position:center;">
+      <div style="position:absolute;inset:0;background:rgba(13,11,10,0.3);display:flex;align-items:center;justify-content:center;">
+        <div style="width:56px;height:56px;border-radius:50%;background:#ff5a1f;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-top:11px solid transparent;border-bottom:11px solid transparent;border-left:17px solid #0d0b0a;margin-left:4px;"></div></div>
+      </div>
+    </div>
+    <div style="padding:20px 24px;display:flex;align-items:center;justify-content:space-between;">
+      <span style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:6px 12px;border:1px solid rgba(245,239,232,0.2);border-radius:999px;color:#c9beb5;">More Work</span>
+      <a href="https://youtu.be/wvxvDLACUuA" target="_blank" rel="noopener" style="font-weight:700;font-size:13px;">Open on YouTube &rarr;</a>
+    </div>
+  </div>
+  <div style="border-radius:18px;overflow:hidden;background:#171110;border:1px solid rgba(245,239,232,0.1);">
+    <div class="vwrap" data-video-id="PHhcjpsiTV8" style="aspect-ratio:16/9;position:relative;cursor:pointer;background-image:url('https://i.ytimg.com/vi/PHhcjpsiTV8/hqdefault.jpg');background-size:cover;background-position:center;">
+      <div style="position:absolute;inset:0;background:rgba(13,11,10,0.3);display:flex;align-items:center;justify-content:center;">
+        <div style="width:56px;height:56px;border-radius:50%;background:#ff5a1f;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-top:11px solid transparent;border-bottom:11px solid transparent;border-left:17px solid #0d0b0a;margin-left:4px;"></div></div>
+      </div>
+    </div>
+    <div style="padding:20px 24px;display:flex;align-items:center;justify-content:space-between;">
+      <span style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:6px 12px;border:1px solid rgba(245,239,232,0.2);border-radius:999px;color:#c9beb5;">More Work</span>
+      <a href="https://youtu.be/PHhcjpsiTV8" target="_blank" rel="noopener" style="font-weight:700;font-size:13px;">Open on YouTube &rarr;</a>
+    </div>
+  </div>
+  <div style="border-radius:18px;overflow:hidden;background:#171110;border:1px solid rgba(245,239,232,0.1);">
+    <div class="vwrap" data-video-id="lxTa-vjzWm8" style="aspect-ratio:16/9;position:relative;cursor:pointer;background-image:url('https://i.ytimg.com/vi/lxTa-vjzWm8/hqdefault.jpg');background-size:cover;background-position:center;">
+      <div style="position:absolute;inset:0;background:rgba(13,11,10,0.3);display:flex;align-items:center;justify-content:center;">
+        <div style="width:56px;height:56px;border-radius:50%;background:#ff5a1f;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-top:11px solid transparent;border-bottom:11px solid transparent;border-left:17px solid #0d0b0a;margin-left:4px;"></div></div>
+      </div>
+    </div>
+    <div style="padding:20px 24px;display:flex;align-items:center;justify-content:space-between;">
+      <span style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:6px 12px;border:1px solid rgba(245,239,232,0.2);border-radius:999px;color:#c9beb5;">More Work</span>
+      <a href="https://youtu.be/lxTa-vjzWm8" target="_blank" rel="noopener" style="font-weight:700;font-size:13px;">Open on YouTube &rarr;</a>
+    </div>
+  </div>
+  <div style="border-radius:18px;overflow:hidden;background:#171110;border:1px solid rgba(245,239,232,0.1);">
+    <div class="vwrap" data-video-id="g5gIdpA4hpQ" style="aspect-ratio:16/9;position:relative;cursor:pointer;background-image:url('https://i.ytimg.com/vi/g5gIdpA4hpQ/hqdefault.jpg');background-size:cover;background-position:center;">
+      <div style="position:absolute;inset:0;background:rgba(13,11,10,0.3);display:flex;align-items:center;justify-content:center;">
+        <div style="width:56px;height:56px;border-radius:50%;background:#ff5a1f;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-top:11px solid transparent;border-bottom:11px solid transparent;border-left:17px solid #0d0b0a;margin-left:4px;"></div></div>
+      </div>
+    </div>
+    <div style="padding:20px 24px;display:flex;align-items:center;justify-content:space-between;">
+      <span style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:6px 12px;border:1px solid rgba(245,239,232,0.2);border-radius:999px;color:#c9beb5;">More Work</span>
+      <a href="https://youtu.be/g5gIdpA4hpQ" target="_blank" rel="noopener" style="font-weight:700;font-size:13px;">Open on YouTube &rarr;</a>
+    </div>
+  </div>
+  <div style="border-radius:18px;overflow:hidden;background:#171110;border:1px solid rgba(245,239,232,0.1);">
+    <div class="vwrap" data-video-id="nj8zE4HSKY4" style="aspect-ratio:16/9;position:relative;cursor:pointer;background-image:url('https://i.ytimg.com/vi/nj8zE4HSKY4/hqdefault.jpg');background-size:cover;background-position:center;">
+      <div style="position:absolute;inset:0;background:rgba(13,11,10,0.3);display:flex;align-items:center;justify-content:center;">
+        <div style="width:56px;height:56px;border-radius:50%;background:#ff5a1f;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-top:11px solid transparent;border-bottom:11px solid transparent;border-left:17px solid #0d0b0a;margin-left:4px;"></div></div>
+      </div>
+    </div>
+    <div style="padding:20px 24px;display:flex;align-items:center;justify-content:space-between;">
+      <span style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:6px 12px;border:1px solid rgba(245,239,232,0.2);border-radius:999px;color:#c9beb5;">More Work</span>
+      <a href="https://youtu.be/nj8zE4HSKY4" target="_blank" rel="noopener" style="font-weight:700;font-size:13px;">Open on YouTube &rarr;</a>
+    </div>
+  </div>
+  <div style="border-radius:18px;overflow:hidden;background:#171110;border:1px solid rgba(245,239,232,0.1);">
+    <div class="vwrap" data-video-id="N0R84Izop5k" style="aspect-ratio:16/9;position:relative;cursor:pointer;background-image:url('https://i.ytimg.com/vi/N0R84Izop5k/hqdefault.jpg');background-size:cover;background-position:center;">
+      <div style="position:absolute;inset:0;background:rgba(13,11,10,0.3);display:flex;align-items:center;justify-content:center;">
+        <div style="width:56px;height:56px;border-radius:50%;background:#ff5a1f;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-top:11px solid transparent;border-bottom:11px solid transparent;border-left:17px solid #0d0b0a;margin-left:4px;"></div></div>
+      </div>
+    </div>
+    <div style="padding:20px 24px;display:flex;align-items:center;justify-content:space-between;">
+      <span style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:6px 12px;border:1px solid rgba(245,239,232,0.2);border-radius:999px;color:#c9beb5;">More Work</span>
+      <a href="https://youtu.be/N0R84Izop5k" target="_blank" rel="noopener" style="font-weight:700;font-size:13px;">Open on YouTube &rarr;</a>
+    </div>
+  </div>
+  <div style="border-radius:18px;overflow:hidden;background:#171110;border:1px solid rgba(245,239,232,0.1);">
+    <div class="vwrap" data-video-id="evrsXp9PfuE" style="aspect-ratio:16/9;position:relative;cursor:pointer;background-image:url('https://i.ytimg.com/vi/evrsXp9PfuE/hqdefault.jpg');background-size:cover;background-position:center;">
+      <div style="position:absolute;inset:0;background:rgba(13,11,10,0.3);display:flex;align-items:center;justify-content:center;">
+        <div style="width:56px;height:56px;border-radius:50%;background:#ff5a1f;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-top:11px solid transparent;border-bottom:11px solid transparent;border-left:17px solid #0d0b0a;margin-left:4px;"></div></div>
+      </div>
+    </div>
+    <div style="padding:20px 24px;display:flex;align-items:center;justify-content:space-between;">
+      <span style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:6px 12px;border:1px solid rgba(245,239,232,0.2);border-radius:999px;color:#c9beb5;">More Work</span>
+      <a href="https://youtu.be/evrsXp9PfuE" target="_blank" rel="noopener" style="font-weight:700;font-size:13px;">Open on YouTube &rarr;</a>
+    </div>
+  </div>
+  </div>
+</section>
 <section class="wrap" style="padding-bottom:80px;text-align:center;">
   <div style="border-radius:20px;background:linear-gradient(160deg,#1e1411,#171110);border:1px solid rgba(245,239,232,0.1);padding:44px 32px;">
-    <h2 class="h2" style="font-size:28px;margin:0 0 12px;">More Videos on YouTube</h2>
-    <p style="max-width:500px;margin:0 auto 24px;">This wall shows a few favourites — the full back-catalogue of business, music, and event videos lives on the Lukewarm Volcano YouTube channel.</p>
+    <h2 class="h2" style="font-size:28px;margin:0 0 12px;">Even More on YouTube</h2>
+    <p style="max-width:500px;margin:0 auto 24px;">The full back-catalogue of business, music, and event videos lives on the Lukewarm Volcano YouTube channel.</p>
     <a href="https://www.youtube.com/channel/UC3s_6P0831NwYad0yUSnlsw" target="_blank" rel="noopener" style="display:inline-block;padding:16px 32px;background:#ff5a1f;color:#0d0b0a;border-radius:999px;font-weight:800;text-decoration:none;">Visit YouTube Channel &rarr;</a>
   </div>
 </section>
 <footer class="site">
   Lukewarm Volcano &middot; Kilrush, Co. Clare &middot; <a href="tel:0834704688">083-4704-688</a> &middot; <a href="mailto:david@lukewarmvolcano.com">david@lukewarmvolcano.com</a>
 </footer>
+<script>
+(function(){
+  var btn = document.getElementById('lvMobileBtn');
+  var menu = document.getElementById('lvMobileMenu');
+  if(btn && menu){
+    btn.addEventListener('click', function(){
+      menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+    });
+  }
+})();
+</script>
 <script>
 document.querySelectorAll('.vwrap').forEach(function(el){
   el.addEventListener('click', function(){
