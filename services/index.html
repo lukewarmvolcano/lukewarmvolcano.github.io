@@ -30,10 +30,12 @@
   }
 
   
+
+  .lv-home-fab{color:#a89b93;transition:color 0.15s ease;font-weight:700;display:inline-flex;align-items:center;gap:5px;text-decoration:none;} .lv-home-fab:hover{color:#ff5a1f;} .lv-home-fab:hover svg{transform:translateX(-3px);} .lv-home-fab svg{transition:transform 0.15s ease;}
 </style>
 </head><body>
-<header style="position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:22px clamp(20px,6vw,56px);background:rgba(13,11,10,0.85);backdrop-filter:blur(10px);border-bottom:1px solid rgba(245,239,232,0.08);">
-    <a href="https://www.lukewarmvolcano.com/" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
+  <header style="position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:22px clamp(20px,6vw,56px);background:rgba(13,11,10,0.85);backdrop-filter:blur(10px);border-bottom:1px solid rgba(245,239,232,0.08);">
+    <a href="../" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
       <img src="https://static.wixstatic.com/media/050372_ad2abc28483145edbaf309be82de1d1d~mv2.png" alt="Lukewarm Volcano logo" style="height:44px;width:auto;display:block;"/>
       <div style="font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:22px;line-height:0.9;letter-spacing:0.5px;color:#f5efe8;">LUKEWARM<br/><span style="color:#ff5a1f;">VOLCANO</span></div>
     </a>
@@ -42,6 +44,7 @@
       <a href="https://www.lukewarmvolcano.com/services/" style="color:#ff5a1f;font-weight:600;font-size:15px;text-decoration:none;">Services</a>
       <a href="https://www.lukewarmvolcano.com/clients/" style="color:#f5efe8;font-weight:600;font-size:15px;text-decoration:none;">Clients</a>
       <a href="https://www.lukewarmvolcano.com/about/" style="color:#f5efe8;font-weight:600;font-size:15px;text-decoration:none;">About</a>
+      <a href="https://www.lukewarmvolcano.com/contact/" style="color:#f5efe8;font-weight:600;font-size:15px;text-decoration:none;">Contact</a>
       <a href="https://www.lukewarmvolcano.com/contact/" style="padding:12px 26px;background:#ff5a1f;color:#0d0b0a;border-radius:999px;font-weight:800;font-size:14px;text-decoration:none;">Get a Free Quote</a>
     </nav>
     <div style="display:flex;align-items:center;gap:14px;">
@@ -52,7 +55,8 @@
       </button>
     </div>
   </header>
-  <div id="lvMobileMenu" style="display:none;background:#0d0b0a;border-bottom:1px solid rgba(245,239,232,0.08);flex-direction:column;padding:8px clamp(20px,6vw,56px) 20px;">
+
+  <div id="lvMobileMenu" style="display:none;position:fixed;top:88px;left:0;right:0;max-height:calc(100vh - 88px);overflow-y:auto;background:#0d0b0a;border-bottom:1px solid rgba(245,239,232,0.08);flex-direction:column;padding:8px clamp(20px,6vw,56px) 20px;z-index:49;box-shadow:0 20px 40px rgba(0,0,0,0.4);">
     <a href="https://www.lukewarmvolcano.com/videos/" style="padding:16px 0;color:#f5efe8;font-weight:600;font-size:17px;border-bottom:1px solid rgba(245,239,232,0.08);text-decoration:none;">Videos</a>
       <a href="https://www.lukewarmvolcano.com/services/" style="padding:16px 0;color:#ff5a1f;font-weight:600;font-size:17px;border-bottom:1px solid rgba(245,239,232,0.08);text-decoration:none;">Services</a>
       <a href="https://www.lukewarmvolcano.com/clients/" style="padding:16px 0;color:#f5efe8;font-weight:600;font-size:17px;border-bottom:1px solid rgba(245,239,232,0.08);text-decoration:none;">Clients</a>
@@ -61,16 +65,16 @@
   </div>
 <section style="padding:64px 0 24px;text-align:center;">
   <div class="wrap">
-    <div class="kicker">Lukewarm Volcano &middot; <span>What We Do Best</span></div>
+    <div class="kicker"><a href="../" class="lv-home-fab"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>Home</a> &middot; Lukewarm Volcano &middot; <span>What We Do Best</span></div>
     <h1 class="h1" style="font-size:clamp(36px,6vw,64px);margin:16px 0 16px;">From Slow Burn To Big Reveal</h1>
-    <p style="max-width:620px;margin:0 auto;">Five ways to get your story on screen — from a quick product clip to a full day of event coverage, all shot, directed and edited personally by David Kelly.</p>
+    <p style="max-width:620px;margin:0 auto;">Six ways to get your story on screen — from a quick product clip to a full day of event coverage, all shot, directed and edited personally by David Kelly.</p>
   </div>
 </section>
 <section class="wrap" style="padding-bottom:56px;">
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px;">
     
   <div style="border-radius:18px;overflow:hidden;background:#171110;border:1px solid rgba(245,239,232,0.1);display:flex;flex-direction:column;">
-    <div style="aspect-ratio:16/9;"><img src="https://static.wixstatic.com/media/050372_cc3578c002b64338976e8a673a7bbba1f002.jpg/v1/fill/w_884,h_497,enc_auto/file.jpeg" alt="Business Videos" style="width:100%;height:100%;object-fit:cover;display:block;"/></div>
+    <div style="aspect-ratio:16/9;"><img src="../assets/service-business-videos.webp" alt="Business Videos" style="width:100%;height:100%;object-fit:cover;display:block;"/></div>
     <div style="padding:26px;">
       <div style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#ff5a1f;margin-bottom:10px;">90 Sec – 3 Min · Impactful</div>
       <h3 class="h2" style="font-size:24px;margin:0 0 10px;">Business Videos</h3>
@@ -78,7 +82,7 @@
     </div>
   </div>
   <div style="border-radius:18px;overflow:hidden;background:#171110;border:1px solid rgba(245,239,232,0.1);display:flex;flex-direction:column;">
-    <div style="aspect-ratio:16/9;"><img src="https://static.wixstatic.com/media/050372_c31274eee5e9427aa90deb62b8870680~mv2.webp/v1/fill/w_589,h_332,enc_auto/file.jpeg" alt="Product Videos" style="width:100%;height:100%;object-fit:cover;display:block;"/></div>
+    <div style="aspect-ratio:16/9;"><img src="../assets/service-product-videos.webp" alt="Product Videos" style="width:100%;height:100%;object-fit:cover;display:block;"/></div>
     <div style="padding:26px;">
       <div style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#ff5a1f;margin-bottom:10px;">15–45 Sec · Innovative</div>
       <h3 class="h2" style="font-size:24px;margin:0 0 10px;">Product Videos</h3>
@@ -94,7 +98,7 @@
     </div>
   </div>
   <div style="border-radius:18px;overflow:hidden;background:#171110;border:1px solid rgba(245,239,232,0.1);display:flex;flex-direction:column;">
-    <div style="aspect-ratio:16/9;"><img src="https://static.wixstatic.com/media/050372_cc3578c002b64338976e8a673a7bbba1f002.jpg/v1/fill/w_884,h_497,enc_auto/file.jpeg" alt="Event Videos" style="width:100%;height:100%;object-fit:cover;display:block;"/></div>
+    <div style="aspect-ratio:16/9;"><img src="../uploads/tf.webp" alt="Event Videos" style="width:100%;height:100%;object-fit:cover;display:block;"/></div>
     <div style="padding:26px;">
       <div style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#ff5a1f;margin-bottom:10px;">Full Day Coverage · Documentary</div>
       <h3 class="h2" style="font-size:24px;margin:0 0 10px;">Event Videos</h3>
@@ -102,11 +106,19 @@
     </div>
   </div>
     <div style="border-radius:18px;overflow:hidden;background:#171110;border:1px solid rgba(245,239,232,0.1);display:flex;flex-direction:column;">
-      <div style="aspect-ratio:16/9;"><image-slot id="drone-service" shape="rect" placeholder="Drop a drone/aerial photo"></image-slot></div>
+      <div style="aspect-ratio:16/9;"><img src="../assets/drone-yoga.webp" alt="Drone aerial photo of an outdoor yoga session" style="width:100%;height:100%;object-fit:cover;display:block;"/></div>
       <div style="padding:26px;">
         <div style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#ff5a1f;margin-bottom:10px;">Aerial Coverage · New</div>
         <h3 class="h2" style="font-size:24px;margin:0 0 10px;">Drone Videos</h3>
         <p style="font-size:14.5px;margin:0;">Sweeping aerial shots that give any project scale and drama — perfect for property, events, tourism, and landscapes across Clare and beyond. Fully licensed drone operation, added to any package or shot standalone.</p>
+      </div>
+    </div>
+    <div style="border-radius:18px;overflow:hidden;background:#171110;border:1px solid rgba(245,239,232,0.1);display:flex;flex-direction:column;">
+      <div style="aspect-ratio:16/9;"><img src="../assets/service-web-design.webp" alt="Web Design & Maintenance" style="width:100%;height:100%;object-fit:cover;object-position:44% center;display:block;"/></div>
+      <div style="padding:26px;">
+        <div style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#ff5a1f;margin-bottom:10px;">Ongoing Support · New</div>
+        <h3 class="h2" style="font-size:24px;margin:0 0 10px;">Web Design &amp; Maintenance</h3>
+        <p style="font-size:14.5px;margin:0;">From initial design and launch to continuous updates and support — we build websites and keep them secure, up-to-date, and running smoothly.</p>
       </div>
     </div>
   </div>
