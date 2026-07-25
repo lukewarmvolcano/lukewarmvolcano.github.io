@@ -193,7 +193,7 @@
   <section id="hero-section" style="position: relative; padding: 90px clamp(20px, 6vw, 56px) 60px; overflow: hidden;">
     <div style="position: absolute; inset: 0; overflow: hidden;">
       <sc-for list="{{ heroSlides }}" as="slide" hint-placeholder-count="4">
-        <div style="position: absolute; inset: 0; overflow: hidden; animation: {{ slide.anim }};"><img src="{{ slide.img }}" alt="" style="width: 100%; height: 100%; object-fit: cover; object-position: center;"/></div>
+        <div style="position: absolute; inset: 0; overflow: hidden; animation: {{ slide.anim }};"><img src="{{ slide.img }}" alt="" loading="{{ slide.loading }}" fetchpriority="{{ slide.fetchPriority }}" decoding="async" style="width: 100%; height: 100%; object-fit: cover; object-position: center;"/></div>
       </sc-for>
     </div>
     <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(13,11,10,0.75) 0%, rgba(13,11,10,0.6) 45%, rgba(13,11,10,0.92) 100%), radial-gradient(60% 50% at 80% 10%, rgba(255,90,31,0.16), transparent 70%);"></div>
@@ -601,6 +601,8 @@ class Component extends DCLogic {
     ];
     const heroSlides = heroSlideImgs.map((img, i) => ({
       img,
+      loading: i === 0 ? 'eager' : 'lazy',
+      fetchPriority: i === 0 ? 'high' : 'low',
       anim: `heroSlide 24s linear infinite ${-(i * 6)}s, kenburns 24s ease-in-out infinite alternate`
     }));
 
