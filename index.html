@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -97,7 +97,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="image" href="assets/hero-slide-1.webp" fetchpriority="high">
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
 <noscript>
   <h1>Videographer, Camera &amp; Drone Operator in Kilrush, County Clare</h1>
   <p>Lukewarm Volcano is David Kelly's freelance videography studio, based in Kilrush, County Clare, offering videographer, camera operator, drone operator, photography and video editing services across Munster and Ireland.</p>
@@ -132,7 +133,7 @@
   @keyframes heroSlide { 0% { opacity: 0; } 3% { opacity: 1; } 22% { opacity: 1; } 25% { opacity: 0; } 100% { opacity: 0; } }
   @keyframes lvHeatDrift { 0% { transform: translate(0,0) scale(1); } 50% { transform: translate(-3%,-2%) scale(1.08); } 100% { transform: translate(0,0) scale(1); } }
   @keyframes lvMoltenShift { 0% { background-position: 0% 50%, 30% 60%; } 50% { background-position: 100% 50%, 70% 40%; } 100% { background-position: 0% 50%, 30% 60%; } }
-  .lv-molten-btn { position: relative; overflow: hidden; background: radial-gradient(circle at 30% 60%, rgba(255,210,120,0.9), transparent 45%), linear-gradient(120deg, #ffb347, #ff5a1f 35%, #e0361a 60%, #ff8a3d 85%, #ffb347); background-size: 100% 100%, 220% 220%; animation: lvMoltenShift 5s ease-in-out infinite; color: #170f0c !important; }
+  .lv-molten-btn { position: relative; overflow: hidden; background-color: #ff8a3d; background-image: radial-gradient(circle at 30% 60%, rgba(255,210,120,0.9), transparent 45%), linear-gradient(120deg, #ffb347, #ff5a1f 35%, #e0361a 60%, #ff8a3d 85%, #ffb347); background-size: 100% 100%, 220% 220%; animation: lvMoltenShift 5s ease-in-out infinite; color: #170f0c !important; }
   .lv-molten-btn span { position: relative; z-index: 1; }
   @keyframes lvPuffUp { 0% { transform: translate(-50%,0) scale(0.3); opacity: 0.7; } 100% { transform: translate(-50%,-70px) scale(1.6); opacity: 0; } }
   @keyframes lvEmberUp { 0% { transform: translate(-50%,0) scale(1); opacity: 1; } 100% { transform: translate(calc(-50% + var(--dx)),-90px) scale(0.4); opacity: 0; } }
@@ -173,7 +174,7 @@
     </nav>
     <div style="display: flex; align-items: center; gap: 14px;">
       <a href="#contact" class="lv-mobile-toggle" style="display: none; padding: 10px 20px; background: {{ accentColor }}; color: #0d0b0a; border-radius: 999px; font-weight: 800; font-size: 13px; white-space: nowrap;">Quote</a>
-      <button onClick="{{ toggleMobileNav }}" class="lv-mobile-toggle" style="display: none; background: none; border: 1px solid rgba(245,239,232,0.3); border-radius: 10px; width: 44px; height: 44px; align-items: center; justify-content: center; color: #f5efe8; cursor: pointer; flex-direction: column; gap: 4px;">
+      <button type="button" onClick="{{ toggleMobileNav }}" aria-label="Open navigation menu" class="lv-mobile-toggle" style="display: none; background: none; border: 1px solid rgba(245,239,232,0.3); border-radius: 10px; width: 44px; height: 44px; align-items: center; justify-content: center; color: #f5efe8; cursor: pointer; flex-direction: column; gap: 4px;">
         <span style="width: 18px; height: 2px; background: #f5efe8; display: block;"></span>
         <span style="width: 18px; height: 2px; background: #f5efe8; display: block;"></span>
       </button>
@@ -229,17 +230,17 @@
   <div style="border-top: 1px solid rgba(245,239,232,0.1); border-bottom: 1px solid rgba(245,239,232,0.1); padding: 20px 0; overflow: hidden; white-space: nowrap;">
     <div style="display: inline-flex; animation: marquee 24s linear infinite;">
       <sc-for list="{{ marqueeItems }}" as="item" hint-placeholder-count="8">
-        <span style="font-family: 'Big Shoulders Display', sans-serif; font-weight: 800; font-size: 30px; text-transform: uppercase; color: #3a2f2a; padding: 0 28px; display: inline-flex; align-items: center; gap: 28px;">{{ item }} <span style="color: {{ accentColor }}; font-size: 20px;">&#9670;</span></span>
+        <span style="font-family: 'Big Shoulders Display', sans-serif; font-weight: 800; font-size: 30px; text-transform: uppercase; color: #7a6b61; padding: 0 28px; display: inline-flex; align-items: center; gap: 28px;">{{ item }} <span style="color: {{ accentColor }}; font-size: 20px;">&#9670;</span></span>
       </sc-for>
       <sc-for list="{{ marqueeItems }}" as="item" hint-placeholder-count="8">
-        <span style="font-family: 'Big Shoulders Display', sans-serif; font-weight: 800; font-size: 30px; text-transform: uppercase; color: #3a2f2a; padding: 0 28px; display: inline-flex; align-items: center; gap: 28px;">{{ item }} <span style="color: {{ accentColor }}; font-size: 20px;">&#9670;</span></span>
+        <span style="font-family: 'Big Shoulders Display', sans-serif; font-weight: 800; font-size: 30px; text-transform: uppercase; color: #7a6b61; padding: 0 28px; display: inline-flex; align-items: center; gap: 28px;">{{ item }} <span style="color: {{ accentColor }}; font-size: 20px;">&#9670;</span></span>
       </sc-for>
     </div>
   </div>
 
   <!-- ABOUT + FEATURES -->
   <section id="about" style="padding: 64px clamp(20px, 6vw, 56px) 0;">
-    <div style="text-align: center; font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #6b615b; margin-bottom: 64px;">
+    <div style="text-align: center; font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #93877f; margin-bottom: 64px;">
       Lukewarm Volcano &middot; Video Production Studio &middot; <span style="color: {{ accentColor }};">Slow Build. Big Eruption.</span> &middot; Kilrush, Co. Clare
     </div>
   </section>
@@ -274,7 +275,7 @@
         <div style="border-top: 1px solid rgba(245,239,232,0.1);">
           <div onClick="{{ p.toggle }}" class="lv-project-toggle" style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 30px clamp(16px, 6vw, 60px); cursor: pointer;">
             <div style="display: flex; align-items: baseline; gap: 18px; min-width: 0;">
-              <h3 style="font-family: 'Big Shoulders Display', sans-serif; font-weight: 900; font-size: clamp(28px, 5vw, 60px); text-transform: uppercase; line-height: 1; margin: 0; min-width: 0; color: {{ p.titleColor }}; -webkit-text-stroke: 1.5px rgba(245,239,232,0.35);">{{ p.title }}</h3>
+              <h3 style="font-family: 'Big Shoulders Display', sans-serif; font-weight: 900; font-size: clamp(28px, 5vw, 60px); text-transform: uppercase; line-height: 1; margin: 0; min-width: 0; color: {{ p.titleColor }}; -webkit-text-stroke: 1.5px rgba(245,239,232,0.8);">{{ p.title }}</h3>
             </div>
             <div style="display: flex; align-items: center; gap: 20px; flex-shrink: 0;">
               <span class="lv-tag-pill" style="font-size: 14px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 8px 16px; border: 1px solid rgba(245,239,232,0.2); border-radius: 999px; color: #c9beb5; white-space: nowrap;">{{ p.tag }}</span>
@@ -286,14 +287,14 @@
               <sc-if value="{{ p.playing }}" hint-placeholder-val="{{ false }}">
                 <div style="border-radius: 16px; overflow: hidden; aspect-ratio: 16/9;"><iframe src="{{ p.embedUrl }}" title="{{ p.title }}" style="width: 100%; height: 100%; border: 0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="{{ true }}"></iframe></div>
               </sc-if>
-              <a onClick="{{ p.play }}" style="cursor: pointer; border-radius: 16px; overflow: hidden; aspect-ratio: 16/9; position: relative; display: {{ p.thumbDisplay }}; background-image: url({{ p.img }}); background-size: cover; background-position: center;">
+              <button type="button" onClick="{{ p.play }}" aria-label="{{ p.playLabel }}" style="cursor: pointer; border: none; padding: 0; width: 100%; border-radius: 16px; overflow: hidden; aspect-ratio: 16/9; position: relative; display: {{ p.thumbDisplay }}; background-image: url({{ p.img }}); background-size: cover; background-position: center;">
                 <div style="position: absolute; inset: 0; background: rgba(13,11,10,0.3); display: flex; align-items: center; justify-content: center;">
                   <div style="width: 54px; height: 54px; border-radius: 50%; background: {{ accentColor }}; display: flex; align-items: center; justify-content: center;"><div style="width: 0; height: 0; border-top: 11px solid transparent; border-bottom: 11px solid transparent; border-left: 17px solid #0d0b0a; margin-left: 4px;"></div></div>
                 </div>
-              </a>
+              </button>
               <div>
                 <p style="font-size: 15.5px; line-height: 1.7; color: #c9beb5; margin: 0 0 20px;">{{ p.desc }}</p>
-                <a onClick="{{ p.play }}" style="cursor: pointer; font-weight: 700; font-size: 14px; color: {{ accentColor }};">Play Video &rarr;</a>
+                <button type="button" onClick="{{ p.play }}" style="cursor: pointer; background: none; border: none; padding: 0; font-family: inherit; font-weight: 700; font-size: 14px; color: {{ accentColor }};">Play Video &rarr;</button>
               </div>
             </div>
           </sc-if>
@@ -305,7 +306,7 @@
 
   <!-- VISION CTA -->
   <section style="padding: 0 clamp(20px, 6vw, 56px) 72px;">
-    <div class="lv-cta-banner" style="position: relative; background-image: url('assets/cta-banner-final.webp'); background-size: cover; background-repeat: no-repeat; background-position: center; min-height: clamp(300px, 26vw, 420px); border-radius: 24px; overflow: hidden; display: flex; align-items: center; justify-content: flex-end;">
+    <div class="lv-cta-banner" style="position: relative; background-color: #f0932f; background-image: url('assets/cta-banner-final.webp'); background-size: cover; background-repeat: no-repeat; background-position: center; min-height: clamp(300px, 26vw, 420px); border-radius: 24px; overflow: hidden; display: flex; align-items: center; justify-content: flex-end;">
       <div class="lv-cta-desktop" style="position: relative; z-index: 1; max-width: 420px; margin-right: 6%; text-align: left;">
         <h3 style="font-family: 'Big Shoulders Display', sans-serif; font-weight: 900; font-size: 34px; line-height: 1.05; text-transform: uppercase; color: #170f0c; margin: 0 0 18px;">Ready When You Are</h3>
         <p style="font-size: 18px; line-height: 1.6; color: #170f0c; font-weight: 700; margin: 0 0 26px;">From first call to final cut, every project gets David's full attention — no handoffs, no templates, just a story shot and cut with care.</p>
@@ -327,7 +328,7 @@
       <sc-for list="{{ services }}" as="s" hint-placeholder-count="4">
         <div style="border-top: 1px solid rgba(245,239,232,0.12);">
           <div onClick="{{ s.toggle }}" style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 30px clamp(16px, 6vw, 80px); cursor: pointer;">
-            <h3 style="font-family: 'Big Shoulders Display', sans-serif; font-weight: 900; font-size: clamp(28px, 5vw, 60px); text-transform: uppercase; line-height: 1; margin: 0; min-width: 0; color: {{ s.titleColor }}; -webkit-text-stroke: 1.5px rgba(245,239,232,0.35);">{{ s.title }}</h3>
+            <h3 style="font-family: 'Big Shoulders Display', sans-serif; font-weight: 900; font-size: clamp(28px, 5vw, 60px); text-transform: uppercase; line-height: 1; margin: 0; min-width: 0; color: {{ s.titleColor }}; -webkit-text-stroke: 1.5px rgba(245,239,232,0.8);">{{ s.title }}</h3>
             <span style="width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(245,239,232,0.25); display: flex; align-items: center; justify-content: center; font-size: 22px; color: {{ accentColor }}; transform: {{ s.iconRotate }}; transition: transform 0.2s; flex-shrink: 0;">+</span>
           </div>
           <sc-if value="{{ s.isOpen }}" hint-placeholder-val="{{ false }}">
@@ -452,7 +453,7 @@
           <span style="font-family: 'Big Shoulders Display', sans-serif; font-size: 40px; color: {{ accentColor }}; line-height: 1;">&ldquo;</span>
           <p style="font-size: 15.5px; line-height: 1.65; color: #c9beb5; margin: 0; flex: 1;">{{ t.quote }}</p>
           <div style="display: flex; align-items: center; gap: 14px; padding-top: 16px; border-top: 1px solid rgba(245,239,232,0.08);">
-            <div style="width: 44px; height: 44px; border-radius: 50%; overflow: hidden; flex-shrink: 0; background: linear-gradient(135deg, {{ accentColor }}, #ffb37a); display: flex; align-items: center; justify-content: center; font-family: 'Big Shoulders Display', sans-serif; font-weight: 800; font-size: 14px; color: #0d0b0a;">{{ t.initial }}</div>
+            <div style="width: 44px; height: 44px; border-radius: 50%; overflow: hidden; flex-shrink: 0; background-color: {{ accentColor }}; background-image: linear-gradient(135deg, {{ accentColor }}, #ffb37a); display: flex; align-items: center; justify-content: center; font-family: 'Big Shoulders Display', sans-serif; font-weight: 800; font-size: 14px; color: #0d0b0a;">{{ t.initial }}</div>
             <div>
               <div style="font-weight: 800; font-size: 14.5px;">{{ t.name }}</div>
               <div style="font-size: 13px; color: #a89b93;">{{ t.company }}</div>
@@ -466,7 +467,7 @@
   <!-- CONTACT / QUOTE -->
   <section id="contact" style="padding: 32px clamp(20px, 6vw, 56px) 72px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: clamp(20px, 6vw, 56px); align-items: center;">
     <div style="aspect-ratio: 4/3; border-radius: 24px; overflow: hidden; border: 1px solid rgba(245,239,232,0.12);">
-      <img src="assets/logos/behind-the-scenes.webp" alt="David Kelly filming on location in County Clare" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; display: block;"/>
+      <img src="assets/logos/lv-logo-wordmark.webp" alt="Lukewarm Volcano logo" loading="lazy" decoding="async" width="1134" height="638" style="width: 100%; height: 100%; object-fit: contain; display: block;"/>
     </div>
     <div>
       <span style="font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: {{ accentColor }};">Free Quote</span>
@@ -487,7 +488,7 @@
   </section>
 
   <!-- FOOTER -->
-  <footer style="background: linear-gradient(135deg, {{ accentColor }}, #d8451c); color: #170f0c; padding: 64px clamp(20px, 6vw, 56px) 32px; position: relative; z-index: 1; overflow: hidden; clip-path: polygon(0% 1.2%, 5% 0.2%, 10% 1.8%, 16% 0.4%, 22% 1.6%, 28% 0.3%, 34% 1.4%, 40% 0.1%, 46% 1.9%, 52% 0.5%, 58% 1.5%, 64% 0.2%, 70% 2%, 76% 0.4%, 82% 1.5%, 88% 0.1%, 94% 1.7%, 100% 0.5%, 100% 100%, 0% 100%);">
+  <footer style="background-color: {{ accentColor }}; background-image: linear-gradient(135deg, {{ accentColor }}, #d8451c); color: #170f0c; padding: 64px clamp(20px, 6vw, 56px) 32px; position: relative; z-index: 1; overflow: hidden; clip-path: polygon(0% 1.2%, 5% 0.2%, 10% 1.8%, 16% 0.4%, 22% 1.6%, 28% 0.3%, 34% 1.4%, 40% 0.1%, 46% 1.9%, 52% 0.5%, 58% 1.5%, 64% 0.2%, 70% 2%, 76% 0.4%, 82% 1.5%, 88% 0.1%, 94% 1.7%, 100% 0.5%, 100% 100%, 0% 100%);">
     <div style="position: absolute; inset: 0; pointer-events: none; opacity: 0.09; mix-blend-mode: overlay; background-image: repeating-linear-gradient(115deg, rgba(23,15,12,0.6) 0px, rgba(23,15,12,0.6) 1px, transparent 1px, transparent 6px), repeating-linear-gradient(25deg, rgba(245,239,232,0.5) 0px, rgba(245,239,232,0.5) 1px, transparent 1px, transparent 8px);"></div>
     <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; margin-bottom: 48px; flex-wrap: wrap; padding-top: 24px;">
       <h2 style="font-family: 'Big Shoulders Display', sans-serif; font-weight: 900; font-size: 88px; line-height: 0.95; margin: 0; text-transform: uppercase; max-width: 700px;">Ready To Erupt? Let's Talk.</h2>
@@ -496,7 +497,7 @@
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 48px; margin-bottom: 48px;">
       <div>
         <div style="font-family: 'Big Shoulders Display', sans-serif; font-weight: 800; font-size: 24px; margin-bottom: 14px;">LUKEWARM <span style="color: #170f0c;">VOLCANO</span></div>
-        <p style="font-size: 14.5px; line-height: 1.6; color: #3a1f14; max-width: 280px; font-weight: 600;">Video production studio serving Kilrush, County Clare, and all of Ireland.</p>
+        <p style="font-size: 14.5px; line-height: 1.6; color: #2b160d; max-width: 280px; font-weight: 600;">Video production studio serving Kilrush, County Clare, and all of Ireland.</p>
       </div>
       <div>
         <div style="font-weight: 800; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; color: #170f0c;">Navigate</div>
@@ -512,19 +513,19 @@
         <div style="display: flex; flex-direction: column; gap: 10px; font-size: 14.5px; font-weight: 700;">
           <a href="tel:0834704688" style="color: #170f0c;">083-4704-688</a>
           <a href="mailto:david@lukewarmvolcano.com" style="color: #170f0c;">david@lukewarmvolcano.com</a>
-          <span style="color: #3a1f14;">Kilrush, Co. Clare</span>
+          <span style="color: #2b160d;">Kilrush, Co. Clare</span>
         </div>
       </div>
       <div>
         <div style="font-weight: 800; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; color: #170f0c;">Newsletter</div>
-        <p style="font-size: 14px; color: #3a1f14; margin: 0 0 14px; font-weight: 600;">Stay up to date with the latest news.</p>
+        <p style="font-size: 14px; color: #2b160d; margin: 0 0 14px; font-weight: 600;">Stay up to date with the latest news.</p>
         <div style="display: flex; gap: 8px;">
           <input type="email" placeholder="Your email" style="flex: 1; background: rgba(245,239,232,0.25); border: 1px solid rgba(23,15,12,0.35); border-radius: 999px; padding: 10px 16px; color: #170f0c; font-size: 14px;"/>
           <button style="background: #170f0c; border: none; border-radius: 999px; padding: 10px 20px; font-weight: 800; color: #f5efe8; cursor: pointer;">Join</button>
         </div>
       </div>
     </div>
-    <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 24px; border-top: 2px solid rgba(23,15,12,0.25); font-size: 13px; color: #3a1f14; font-weight: 700;">
+    <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 24px; border-top: 2px solid rgba(23,15,12,0.25); font-size: 13px; color: #2b160d; font-weight: 700;">
       <span>&copy; Lukewarm Volcano 2026</span>
       <div style="display: flex; gap: 20px;">
         <a href="https://www.facebook.com/lukewarmvolcano/" style="color: #170f0c; display: flex; align-items: center; gap: 6px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="#170f0c"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg>Facebook</a>
@@ -535,7 +536,7 @@
   </footer>
 
   <sc-if value="{{ volcanoVisible }}" hint-placeholder-val="{{ false }}">
-    <button onClick="{{ onVolcanoClick }}" title="Back to top" style="position: fixed; bottom: 28px; right: 28px; z-index: 60; width: 60px; height: 60px; border: none; background: none; cursor: pointer; padding: 0;">
+    <button type="button" onClick="{{ onVolcanoClick }}" aria-label="Back to top" title="Back to top" style="position: fixed; bottom: 28px; right: 28px; z-index: 60; width: 60px; height: 60px; border: none; background: none; cursor: pointer; padding: 0;">
       <div style="position: relative; width: 100%; height: 100%; animation: {{ volcanoShakeAnim }};">
         <sc-for list="{{ volcanoPuffs }}" as="p" hint-placeholder-count="0">
           <div style="position: absolute; left: 50%; bottom: 32px; width: {{ p.size }}px; height: {{ p.size }}px; border-radius: 50%; background: radial-gradient(circle, rgba(120,120,120,0.6), transparent 70%); animation: lvPuffUp 0.8s ease-out forwards;"></div>
@@ -646,8 +647,8 @@ class Component extends DCLogic {
 
     const videosPage = 'https://www.lukewarmvolcano.com/videos';
     const projectData = [
-      { index: '01', tag: 'Event', title: "Loop Head Together", desc: "The launch video from Loop Head Together's Sceene EIP event — an informative afternoon focused on their biochar soil project.", img: 'https://static.wixstatic.com/media/050372_cc3578c002b64338976e8a673a7bbba1f002.jpg/v1/fill/w_589,h_332,enc_auto/file.jpeg', videoId: 'kst4XdqQ_j4' },
-      { index: '02', tag: 'Product', title: 'Claddagh Jewellers', desc: 'Created for the Claddagh Jewellers in Galway City — a short product-style video highlighting their quality, tradition, and craftsmanship.', img: 'https://static.wixstatic.com/media/050372_c31274eee5e9427aa90deb62b8870680~mv2.webp/v1/fill/w_589,h_332,enc_auto/file.jpeg', videoId: 'iqJ4m6UIsCU' },
+      { index: '01', tag: 'Event', title: "Loop Head Together", desc: "The launch video from Loop Head Together's Sceene EIP event — an informative afternoon focused on their biochar soil project.", img: 'assets/logos/thumb-loop-head.webp', videoId: 'kst4XdqQ_j4' },
+      { index: '02', tag: 'Product', title: 'Claddagh Jewellers', desc: 'Created for the Claddagh Jewellers in Galway City — a short product-style video highlighting their quality, tradition, and craftsmanship.', img: 'assets/logos/thumb-claddagh.webp', videoId: 'iqJ4m6UIsCU' },
       { index: '03', tag: 'Music Video', title: "Zindagi — Shariq Jee", desc: "Filmed in Malbay Studios and on location in Kilkee and Kilrush. Zindagi is Shariq's own song, dedicated to his love.", img: 'https://i.ytimg.com/vi/aT68KEwEIsI/maxresdefault.jpg', videoId: 'aT68KEwEIsI' }
     ];
     const projects = projectData.map((p, i) => {
@@ -658,6 +659,7 @@ class Component extends DCLogic {
         isOpen,
         playing,
         thumbDisplay: playing ? 'none' : 'block',
+        playLabel: `Play video: ${p.title}`,
         embedUrl: `https://www.youtube.com/embed/${p.videoId}?autoplay=1&rel=0&origin=${encodeURIComponent(typeof window !== 'undefined' ? window.location.origin : '')}`,
         play: () => this.setState({ playingProject: i }),
         titleColor: isOpen ? '#f5efe8' : 'transparent',
