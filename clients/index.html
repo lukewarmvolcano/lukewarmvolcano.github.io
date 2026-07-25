@@ -14,7 +14,8 @@
 <meta property="og:url" content="https://www.lukewarmvolcano.com/clients/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Inter:wght@400;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet"></noscript>
 <script src="../image-slot.js"></script>
 <style>
   *{box-sizing:border-box;}
@@ -54,7 +55,7 @@
 </head><body>
   <header style="position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:22px clamp(20px,6vw,56px);background:rgba(13,11,10,0.85);backdrop-filter:blur(10px);border-bottom:1px solid rgba(245,239,232,0.08);">
     <a href="../" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
-      <img loading="lazy" decoding="async" src="../assets/lv-logo-hi.png" alt="Lukewarm Volcano logo" style="height:44px;width:auto;display:block;"/>
+      <img fetchpriority="high" decoding="async" src="../assets/lv-logo-hi.png" alt="Lukewarm Volcano logo" style="height:44px;width:auto;display:block;"/>
       <div style="font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:22px;line-height:0.9;letter-spacing:0.5px;color:#f5efe8;">LUKEWARM<br/><span style="color:#ff5a1f;">VOLCANO</span></div>
     </a>
     <nav class="lv-nav-links" style="display:flex;align-items:center;gap:36px;">
@@ -67,7 +68,7 @@
     </nav>
     <div style="display:flex;align-items:center;gap:14px;">
       <a href="https://www.lukewarmvolcano.com/contact/" class="lv-mobile-toggle" style="display:none;padding:10px 20px;background:#ff5a1f;color:#0d0b0a;border-radius:999px;font-weight:800;font-size:13px;white-space:nowrap;text-decoration:none;">Quote</a>
-      <button id="lvMobileBtn" class="lv-mobile-toggle" style="display:none;background:none;border:1px solid rgba(245,239,232,0.3);border-radius:10px;width:44px;height:44px;align-items:center;justify-content:center;color:#f5efe8;cursor:pointer;flex-direction:column;gap:4px;">
+      <button id="lvMobileBtn" type="button" aria-label="Open navigation menu" class="lv-mobile-toggle" style="display:none;background:none;border:1px solid rgba(245,239,232,0.3);border-radius:10px;width:44px;height:44px;align-items:center;justify-content:center;color:#f5efe8;cursor:pointer;flex-direction:column;gap:4px;">
         <span style="width:18px;height:2px;background:#f5efe8;display:block;"></span>
         <span style="width:18px;height:2px;background:#f5efe8;display:block;"></span>
       </button>
@@ -91,7 +92,7 @@
 <section class="wrap" style="padding-bottom:80px;">
   <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:16px;" class="client-grid">
 
-  <button class="client-tile" onclick="openClientModal(this)"
+  <button type="button" class="client-tile" onclick="openClientModal(this)" aria-label="Read about Claddagh Jewellers"
     data-name="Claddagh Jewellers"
     data-desc="A Galway City jewellers — we produced a product-style video highlighting the quality, tradition, and craftsmanship behind their pieces. A pleasure to shoot something so detail-driven."
     data-link="https://www.thecladdagh.com/"
@@ -99,7 +100,7 @@
     <div class="logo" style="background-image:url('../assets/logos/claddagh.webp');"></div>
   </button>
 
-  <button class="client-tile" onclick="openClientModal(this)"
+  <button type="button" class="client-tile" onclick="openClientModal(this)" aria-label="Read about JJ Corry"
     data-name="JJ Corry"
     data-desc="An independent Irish whiskey bottler based in County Clare. Great to work with a brand that cares as much about craft and story as we do."
     data-link="https://www.jjcorry.com/"
@@ -107,7 +108,7 @@
     <div class="logo" style="background-image:url('../assets/logos/jj-corry.webp');"></div>
   </button>
 
-  <button class="client-tile" onclick="openClientModal(this)"
+  <button type="button" class="client-tile" onclick="openClientModal(this)" aria-label="Read about Cliffs of Moher Experience"
     data-name="Cliffs of Moher Experience"
     data-desc="One of Ireland's biggest visitor attractions. We've made sustainability-focused videos and content promoting online bookings — always a pleasure working with their team."
     data-link="https://www.cliffsofmoher.ie/"
@@ -115,7 +116,7 @@
     <div class="logo" style="background-image:url('../assets/logos/cliffs-of-moher.webp');"></div>
   </button>
 
-  <button class="client-tile" onclick="openClientModal(this)"
+  <button type="button" class="client-tile" onclick="openClientModal(this)" aria-label="Read about Considine's Bakery"
     data-name="Considine's Bakery"
     data-desc="A well-loved local bakery in Clare — full of character, and great fun to film."
     data-link="https://www.facebook.com/considinesbakery/"
@@ -123,7 +124,7 @@
     <div class="logo" style="background-image:url('../assets/logos/considines.webp');"></div>
   </button>
 
-  <button class="client-tile" onclick="openClientModal(this)"
+  <button type="button" class="client-tile" onclick="openClientModal(this)" aria-label="Read about Loop Head Together"
     data-name="Loop Head Together"
     data-desc="A community sustainability project on the Loop Head peninsula. We filmed the launch video for their Sceene EIP biochar soil event."
     data-link="https://www.loopheadtogether.ie/"
@@ -131,7 +132,7 @@
     <div class="logo" style="background-image:url('../assets/logos/loop-head-together.webp');"></div>
   </button>
 
-  <button class="client-tile" onclick="openClientModal(this)"
+  <button type="button" class="client-tile" onclick="openClientModal(this)" aria-label="Read about Hemp Higher Yoga"
     data-name="Hemp Higher Yoga"
     data-desc="A wellness and yoga studio bringing calm, considered energy to every shoot — a genuinely lovely brand to work alongside."
     data-link="https://www.facebook.com/hemphigheryoga/"
@@ -139,7 +140,7 @@
     <div class="logo" style="background-image:url('../assets/logos/hemp-higher-yoga.webp');"></div>
   </button>
 
-  <button class="client-tile" onclick="openClientModal(this)"
+  <button type="button" class="client-tile" onclick="openClientModal(this)" aria-label="Read about AVEA"
     data-name="AVEA"
     data-desc="Ireland's Association of Visitor Experiences &amp; Attractions. We produced their conference promo video, filmed at locations across County Clare."
     data-link="https://avea.ie/"
@@ -147,7 +148,7 @@
     <div class="logo" style="background-image:url('../assets/logos/avea.webp');"></div>
   </button>
 
-  <button class="client-tile" onclick="openClientModal(this)"
+  <button type="button" class="client-tile" onclick="openClientModal(this)" aria-label="Read about Johnson's Bar"
     data-name="Johnson's Bar"
     data-desc="A well-known Kilrush pub with plenty of atmosphere — a great local venue to capture on camera."
     data-link="https://www.facebook.com/people/Johnsons-Bar-Kilrush/100063704017085/"
@@ -155,7 +156,7 @@
     <div class="logo" style="background-image:url('../assets/logos/johnsons.webp');"></div>
   </button>
 
-  <button class="client-tile" onclick="openClientModal(this)"
+  <button type="button" class="client-tile" onclick="openClientModal(this)" aria-label="Read about Feel The Burren"
     data-name="Feel The Burren"
     data-desc="A tourism initiative showcasing the Burren region — a great excuse to film some of the most striking landscapes in Clare."
     data-link="https://www.feeltheburren.ie/"
@@ -163,7 +164,7 @@
     <div class="logo" style="background-image:url('../assets/logos/feel-the-burren.webp');"></div>
   </button>
 
-  <button class="client-tile" onclick="openClientModal(this)"
+  <button type="button" class="client-tile" onclick="openClientModal(this)" aria-label="Read about West Coast Aqua Park"
     data-name="West Coast Aqua Park"
     data-desc="Kilrush's floating water park — high energy, fast-paced, and a fun one to shoot for action and promo content."
     data-link="https://westlakeaquapark.ie/"
@@ -171,7 +172,7 @@
     <div class="logo" style="background-image:url('../assets/logos/west-coast-aqua-park.webp');"></div>
   </button>
 
-  <button class="client-tile" onclick="openClientModal(this)"
+  <button type="button" class="client-tile" onclick="openClientModal(this)" aria-label="Read about Qualibuild"
     data-name="Qualibuild"
     data-desc="A construction and building company based in Clare — straightforward, professional, and great to collaborate with on-site."
     data-link="https://www.igbc.ie/projects__trashed/qualibuild/"
@@ -179,7 +180,7 @@
     <div class="logo" style="background-image:url('../assets/logos/qualibuild.webp');"></div>
   </button>
 
-  <button class="client-tile" onclick="openClientModal(this)"
+  <button type="button" class="client-tile" onclick="openClientModal(this)" aria-label="Read about MHRA"
     data-name="MHRA"
     data-desc="A trusted local partner — always a smooth, professional collaboration from brief to delivery."
     data-link="https://charliemernagh.dudaone.com/contact"
