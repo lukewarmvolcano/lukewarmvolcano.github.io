@@ -96,7 +96,7 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="image" href="assets/hero-slide-1.webp" fetchpriority="high">
+<link rel="preload" as="image" href="assets/hero-slide-1.webp" imagesrcset="assets/hero-slide-1-800.webp 800w, assets/hero-slide-1.webp 1600w" imagesizes="100vw" fetchpriority="high">
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
 <noscript>
@@ -117,8 +117,7 @@
     .lv-hero-grid { grid-template-columns: 1fr !important; }
     .lv-hero-social { flex-wrap: wrap; }
     .lv-side-nav { display: none !important; }
-    .lv-tag-pill { display: none !important; }
-    .lv-cta-desktop { display: none !important; }
+              .lv-cta-desktop { display: none !important; }
     .lv-cta-mobile-btn { display: inline-flex !important; }
     .lv-cta-banner { aspect-ratio: 2064/563 !important; background-size: cover !important; min-height: 0 !important; }
     .lv-showreel { display: none !important; }
@@ -135,6 +134,27 @@
   @keyframes lvMoltenShift { 0% { background-position: 0% 50%, 30% 60%; } 50% { background-position: 100% 50%, 70% 40%; } 100% { background-position: 0% 50%, 30% 60%; } }
   .lv-molten-btn { position: relative; overflow: hidden; background-color: #ff8a3d; background-image: radial-gradient(circle at 30% 60%, rgba(255,210,120,0.9), transparent 45%), linear-gradient(120deg, #ffb347, #ff5a1f 35%, #e0361a 60%, #ff8a3d 85%, #ffb347); background-size: 100% 100%, 220% 220%; animation: lvMoltenShift 5s ease-in-out infinite; color: #170f0c !important; }
   .lv-molten-btn span { position: relative; z-index: 1; }
+  /* Slim accordion rows with a bold image reveal on hover */
+  .lv-row { position: relative; overflow: hidden; border-bottom: 1px solid rgba(245,239,232,0.12); }
+  .lv-row-inner { position: relative; z-index: 2; display: flex; align-items: center; gap: clamp(12px, 2vw, 24px); padding: 0 clamp(14px, 2.6vw, 30px); height: 74px; pointer-events: none; }
+  .lv-row-btn { position: absolute; left: 0; right: 0; top: 0; height: 74px; z-index: 3; width: 100%; padding: 0; margin: 0; background: none; border: none; cursor: pointer; font: inherit; color: inherit; }
+  .lv-row-btn:focus-visible { outline: 2px solid #ff5a1f; outline-offset: -3px; }
+  .lv-peek { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transform: scale(1.08); transition: opacity 0.4s cubic-bezier(.2,.8,.2,1), transform 0.6s cubic-bezier(.2,.8,.2,1); pointer-events: none; z-index: 0; }
+  .lv-peek-veil { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(13,11,10,0.92) 0%, rgba(13,11,10,0.72) 45%, rgba(13,11,10,0.55) 100%); opacity: 0; transition: opacity 0.4s ease; pointer-events: none; z-index: 1; }
+  .lv-row:hover .lv-peek { opacity: 1; transform: scale(1); }
+  .lv-row:hover .lv-peek-veil { opacity: 1; }
+  .lv-rowtitle { transition: transform 0.35s cubic-bezier(.2,.8,.2,1), color 0.2s ease; }
+  .lv-row:hover .lv-rowtitle { transform: translateX(10px); }
+  .lv-rowsweep { position: absolute; left: 0; bottom: -1px; height: 2px; width: 0; background: #ff5a1f; transition: width 0.45s cubic-bezier(.2,.8,.2,1); z-index: 3; }
+  .lv-row:hover .lv-rowsweep { width: 100%; }
+  @media (max-width: 620px) {
+    .lv-row-inner { height: 62px; }
+    .lv-row-btn { height: 62px; }
+    .lv-rowmeta { display: none !important; }
+    .lv-panel { flex-direction: column !important; align-items: stretch !important; gap: 16px !important; }
+    .lv-panel > div:first-child { width: 100% !important; max-width: none !important; }
+  }
+  
   @keyframes lvPuffUp { 0% { transform: translate(-50%,0) scale(0.3); opacity: 0.7; } 100% { transform: translate(-50%,-70px) scale(1.6); opacity: 0; } }
   @keyframes lvEmberUp { 0% { transform: translate(-50%,0) scale(1); opacity: 1; } 100% { transform: translate(calc(-50% + var(--dx)),-90px) scale(0.4); opacity: 0; } }
   @keyframes lvShake { 0%, 100% { transform: translate(0,0); } 25% { transform: translate(-1px,-1px); } 50% { transform: translate(1px,1px); } 75% { transform: translate(-1px,1px); } }
@@ -161,7 +181,7 @@
   <!-- HEADER -->
   <header style="position: sticky; top: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; padding: 22px clamp(20px, 6vw, 56px); background: rgba(13,11,10,0.85); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(245,239,232,0.08);">
     <div style="display: flex; align-items: center; gap: 12px;">
-      <img src="assets/lv-logo-hi.png" alt="Lukewarm Volcano logo" width="44" height="50" fetchpriority="high" decoding="async" style="height: 44px; width: auto; display: block;"/>
+      <img src="assets/lv-logo-sm.webp" alt="Lukewarm Volcano logo" width="39" height="44" fetchpriority="high" decoding="async" style="height: 44px; width: auto; display: block;"/>
       <div style="font-family: 'Big Shoulders Display', sans-serif; font-weight: 800; font-size: 22px; line-height: 0.9; letter-spacing: 0.5px;">LUKEWARM<br/><span style="color: {{ accentColor }};">VOLCANO</span></div>
     </div>
     <nav class="lv-nav-links" style="display: flex; align-items: center; gap: 36px;">
@@ -192,8 +212,11 @@
   <!-- HERO -->
   <section id="hero-section" style="position: relative; padding: 90px clamp(20px, 6vw, 56px) 60px; overflow: hidden;">
     <div style="position: absolute; inset: 0; overflow: hidden;">
+      <sc-if value="{{ heroBaseVisible }}" hint-placeholder-val="{{ true }}">
+        <div style="position: absolute; inset: 0; overflow: hidden;"><img src="assets/hero-slide-1.webp" srcset="assets/hero-slide-1-800.webp 800w, assets/hero-slide-1.webp 1600w" sizes="100vw" alt="" fetchpriority="high" decoding="async" style="width: 100%; height: 100%; object-fit: cover; object-position: center;"/></div>
+      </sc-if>
       <sc-for list="{{ heroSlides }}" as="slide" hint-placeholder-count="4">
-        <div style="position: absolute; inset: 0; overflow: hidden; animation: {{ slide.anim }};"><img src="{{ slide.img }}" alt="" loading="{{ slide.loading }}" fetchpriority="{{ slide.fetchPriority }}" decoding="async" style="width: 100%; height: 100%; object-fit: cover; object-position: center;"/></div>
+        <div style="position: absolute; inset: 0; overflow: hidden; animation: {{ slide.anim }};"><img src="{{ slide.img }}" srcset="{{ slide.srcSet }}" sizes="{{ slide.sizes }}" alt="" loading="{{ slide.loading }}" fetchpriority="{{ slide.fetchPriority }}" decoding="async" style="width: 100%; height: 100%; object-fit: cover; object-position: center;"/></div>
       </sc-for>
     </div>
     <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(13,11,10,0.75) 0%, rgba(13,11,10,0.6) 45%, rgba(13,11,10,0.92) 100%), radial-gradient(60% 50% at 80% 10%, rgba(255,90,31,0.16), transparent 70%);"></div>
@@ -272,35 +295,35 @@
     </div>
     <div>
       <sc-for list="{{ projects }}" as="p" hint-placeholder-count="3">
-        <div style="border-top: 1px solid rgba(245,239,232,0.1);">
-          <div onClick="{{ p.toggle }}" class="lv-project-toggle" style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 30px clamp(16px, 6vw, 60px); cursor: pointer;">
-            <div style="display: flex; align-items: baseline; gap: 18px; min-width: 0;">
-              <h3 style="font-family: 'Big Shoulders Display', sans-serif; font-weight: 900; font-size: clamp(28px, 5vw, 60px); text-transform: uppercase; line-height: 1; margin: 0; min-width: 0; color: {{ p.titleColor }}; -webkit-text-stroke: 1.5px rgba(245,239,232,0.8);">{{ p.title }}</h3>
-            </div>
-            <div style="display: flex; align-items: center; gap: 20px; flex-shrink: 0;">
-              <span class="lv-tag-pill" style="font-size: 14px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 8px 16px; border: 1px solid rgba(245,239,232,0.2); border-radius: 999px; color: #c9beb5; white-space: nowrap;">{{ p.tag }}</span>
-              <span style="width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(245,239,232,0.25); display: flex; align-items: center; justify-content: center; font-size: 22px; color: {{ accentColor }}; transform: {{ p.iconRotate }}; transition: transform 0.2s; flex-shrink: 0;">+</span>
-            </div>
+        <div class="lv-row">
+          <img class="lv-peek" src="{{ p.peekImg }}" alt="" loading="lazy" decoding="async"/>
+          <div class="lv-peek-veil"></div>
+          <span class="lv-rowsweep"></span>
+          <div class="lv-row-inner">
+            <span style="font-size: 12px; font-weight: 700; letter-spacing: 1px; color: {{ accentColor }}; flex-shrink: 0; width: 22px;">{{ p.num }}</span>
+            <h3 class="lv-rowtitle" style="font-family: 'Big Shoulders Display', sans-serif; font-weight: 800; font-size: clamp(19px, 2.5vw, 32px); text-transform: uppercase; line-height: 1; margin: 0; flex: 1; min-width: 0; color: {{ p.titleColor }}; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ p.title }}</h3>
+            <span class="lv-rowmeta" style="font-size: 11.5px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #c9beb5; white-space: nowrap; flex-shrink: 0;">{{ p.tag }}</span>
+            <span style="width: 28px; height: 28px; border-radius: 50%; border: 1px solid rgba(245,239,232,0.35); display: flex; align-items: center; justify-content: center; font-size: 16px; line-height: 1; color: {{ accentColor }}; transform: {{ p.iconRotate }}; transition: transform 0.25s; flex-shrink: 0;">+</span>
           </div>
+          <button type="button" onClick="{{ p.toggle }}" aria-expanded="{{ p.isOpen }}" aria-label="{{ p.title }}" class="lv-row-btn"></button>
           <sc-if value="{{ p.isOpen }}" hint-placeholder-val="{{ false }}">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; padding: 0 4px 44px; align-items: center;">
-              <sc-if value="{{ p.playing }}" hint-placeholder-val="{{ false }}">
-                <div style="border-radius: 16px; overflow: hidden; aspect-ratio: 16/9;"><iframe src="{{ p.embedUrl }}" title="{{ p.title }}" style="width: 100%; height: 100%; border: 0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="{{ true }}"></iframe></div>
-              </sc-if>
-              <button type="button" onClick="{{ p.play }}" aria-label="{{ p.playLabel }}" style="cursor: pointer; border: none; padding: 0; width: 100%; border-radius: 16px; overflow: hidden; aspect-ratio: 16/9; position: relative; display: {{ p.thumbDisplay }}; background-image: url({{ p.img }}); background-size: cover; background-position: center;">
-                <div style="position: absolute; inset: 0; background: rgba(13,11,10,0.3); display: flex; align-items: center; justify-content: center;">
-                  <div style="width: 54px; height: 54px; border-radius: 50%; background: {{ accentColor }}; display: flex; align-items: center; justify-content: center;"><div style="width: 0; height: 0; border-top: 11px solid transparent; border-bottom: 11px solid transparent; border-left: 17px solid #0d0b0a; margin-left: 4px;"></div></div>
-                </div>
-              </button>
-              <div>
-                <p style="font-size: 15.5px; line-height: 1.7; color: #c9beb5; margin: 0 0 20px;">{{ p.desc }}</p>
-                <button type="button" onClick="{{ p.play }}" style="cursor: pointer; background: none; border: none; padding: 0; font-family: inherit; font-weight: 700; font-size: 14px; color: {{ accentColor }};">Play Video &rarr;</button>
+            <div class="lv-panel" style="position: relative; z-index: 2; display: flex; gap: clamp(18px, 2.6vw, 32px); align-items: center; padding: 4px clamp(14px, 2.6vw, 30px) 26px;">
+              <div style="width: clamp(200px, 34%, 400px); flex-shrink: 0;">
+                <sc-if value="{{ p.playing }}" hint-placeholder-val="{{ false }}">
+                  <div style="border-radius: 10px; overflow: hidden; aspect-ratio: 16/9;"><iframe src="{{ p.embedUrl }}" title="{{ p.title }}" style="width: 100%; height: 100%; border: 0; display: block;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="{{ true }}"></iframe></div>
+                </sc-if>
+                <button type="button" onClick="{{ p.play }}" aria-label="{{ p.playLabel }}" style="cursor: pointer; border: none; padding: 0; width: 100%; aspect-ratio: 16/9; border-radius: 10px; overflow: hidden; position: relative; display: {{ p.thumbDisplay }}; background-color: #171110; background-image: url({{ p.img }}); background-size: cover; background-position: center;">
+                  <span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 44px; height: 44px; border-radius: 50%; background: {{ accentColor }}; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 22px rgba(0,0,0,0.5);"><span style="width: 0; height: 0; border-top: 9px solid transparent; border-bottom: 9px solid transparent; border-left: 14px solid #0d0b0a; margin-left: 4px;"></span></span>
+                </button>
+              </div>
+              <div style="flex: 1; min-width: 0;">
+                <p style="font-size: 14.5px; line-height: 1.6; color: #c9beb5; margin: 0 0 14px; text-wrap: pretty;">{{ p.desc }}</p>
+                <button type="button" onClick="{{ p.play }}" style="cursor: pointer; border: none; padding: 11px 22px; border-radius: 999px; background: {{ accentColor }}; color: #0d0b0a; font-family: inherit; font-weight: 800; font-size: 12.5px; letter-spacing: 0.5px; text-transform: uppercase;">Play Video</button>
               </div>
             </div>
           </sc-if>
         </div>
       </sc-for>
-      <div style="border-top: 1px solid rgba(245,239,232,0.1);"></div>
     </div>
   </section>
 
@@ -325,37 +348,45 @@
       <a href="services/" style="font-weight: 700; font-size: 14px; color: {{ accentColor }};">Explore All Services &rarr;</a>
     </div>
     <div>
-      <sc-for list="{{ services }}" as="s" hint-placeholder-count="4">
-        <div style="border-top: 1px solid rgba(245,239,232,0.12);">
-          <div onClick="{{ s.toggle }}" style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 30px clamp(16px, 6vw, 80px); cursor: pointer;">
-            <h3 style="font-family: 'Big Shoulders Display', sans-serif; font-weight: 900; font-size: clamp(28px, 5vw, 60px); text-transform: uppercase; line-height: 1; margin: 0; min-width: 0; color: {{ s.titleColor }}; -webkit-text-stroke: 1.5px rgba(245,239,232,0.8);">{{ s.title }}</h3>
-            <span style="width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(245,239,232,0.25); display: flex; align-items: center; justify-content: center; font-size: 22px; color: {{ accentColor }}; transform: {{ s.iconRotate }}; transition: transform 0.2s; flex-shrink: 0;">+</span>
+      <sc-for list="{{ servicesFeatured }}" as="s" hint-placeholder-count="3">
+        <div class="lv-row">
+          <img class="lv-peek" src="{{ s.peekImg }}" alt="" loading="lazy" decoding="async"/>
+          <div class="lv-peek-veil"></div>
+          <span class="lv-rowsweep"></span>
+          <div class="lv-row-inner">
+            <span style="font-size: 12px; font-weight: 700; letter-spacing: 1px; color: {{ accentColor }}; flex-shrink: 0; width: 22px;">{{ s.num }}</span>
+            <h3 class="lv-rowtitle" style="font-family: 'Big Shoulders Display', sans-serif; font-weight: 800; font-size: clamp(19px, 2.5vw, 32px); text-transform: uppercase; line-height: 1; margin: 0; flex: 1; min-width: 0; color: {{ s.titleColor }}; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ s.title }}</h3>
+            <span class="lv-rowmeta" style="font-size: 11.5px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #c9beb5; white-space: nowrap; flex-shrink: 0;">{{ s.length }}</span>
+            <span style="width: 28px; height: 28px; border-radius: 50%; border: 1px solid rgba(245,239,232,0.35); display: flex; align-items: center; justify-content: center; font-size: 16px; line-height: 1; color: {{ accentColor }}; transform: {{ s.iconRotate }}; transition: transform 0.25s; flex-shrink: 0;">+</span>
           </div>
+          <button type="button" onClick="{{ s.toggle }}" aria-expanded="{{ s.isOpen }}" aria-label="{{ s.title }}" class="lv-row-btn"></button>
           <sc-if value="{{ s.isOpen }}" hint-placeholder-val="{{ false }}">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; padding: 0 4px 44px; align-items: center;">
-              <div>
-                <div style="font-family: 'Big Shoulders Display', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: {{ accentColor }}; margin-bottom: 14px;">{{ s.length }}</div>
-                <p style="font-size: 15.5px; line-height: 1.7; color: #c9beb5; margin: 0 0 20px;">{{ s.desc }}</p>
-                <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
-                  <sc-for list="{{ s.tags }}" as="tag" hint-placeholder-count="3">
-                    <span style="font-size: 12px; font-weight: 600; padding: 6px 12px; border: 1px solid rgba(245,239,232,0.15); border-radius: 999px; color: #c9beb5;">{{ tag }}</span>
-                  </sc-for>
-                </div>
-                <a href="tel:0834704688" style="font-weight: 700; font-size: 14px; color: {{ accentColor }};">Call or Email to Find Out More &rarr;</a>
+            <div class="lv-panel" style="position: relative; z-index: 2; display: flex; gap: clamp(18px, 2.6vw, 32px); align-items: center; padding: 4px clamp(14px, 2.6vw, 30px) 26px;">
+              <div style="width: clamp(200px, 34%, 400px); flex-shrink: 0; border-radius: 10px; overflow: hidden; aspect-ratio: 16/9; background-color: #171110;">
+                <img src="{{ s.peekImg }}" srcset="{{ s.imgSrcSet }}" sizes="{{ s.imgSizes }}" alt="{{ s.title }}" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;"/>
               </div>
-              <div style="border-radius: 16px; overflow: hidden; aspect-ratio: 16/9;">
-                <sc-if value="{{ s.hasImg }}" hint-placeholder-val="{{ true }}">
-                  <img src="{{ s.img }}" alt="{{ s.title }}" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; object-position: center;"/>
-                </sc-if>
-                <sc-if value="{{ s.noImg }}" hint-placeholder-val="{{ false }}">
-                  <img src="assets/service-web-design.webp" alt="{{ s.title }}" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; object-position: 44% center;"/>
-                </sc-if>
+              <div style="flex: 1; min-width: 0;">
+                <p style="font-size: 14.5px; line-height: 1.6; color: #c9beb5; margin: 0 0 12px; text-wrap: pretty;">{{ s.desc }}</p>
+                <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+                  <sc-for list="{{ s.tags }}" as="tag" hint-placeholder-count="3">
+                    <span style="font-size: 11.5px; font-weight: 600; padding: 5px 11px; border: 1px solid rgba(245,239,232,0.2); border-radius: 999px; color: #c9beb5; white-space: nowrap;">{{ tag }}</span>
+                  </sc-for>
+                  <a href="#contact" style="margin-left: 4px; padding: 11px 22px; border-radius: 999px; background: {{ accentColor }}; color: #0d0b0a; font-weight: 800; font-size: 12.5px; letter-spacing: 0.5px; text-transform: uppercase; white-space: nowrap;">Get a Quote</a>
+                </div>
               </div>
             </div>
           </sc-if>
         </div>
       </sc-for>
-      <div style="border-top: 1px solid rgba(245,239,232,0.12);"></div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 1px; background: rgba(245,239,232,0.12); border-bottom: 1px solid rgba(245,239,232,0.12);">
+        <sc-for list="{{ servicesRest }}" as="s" hint-placeholder-count="3">
+          <a href="services/" style="background: #0d0b0a; padding: 20px clamp(14px, 2vw, 22px); display: flex; flex-direction: column; gap: 6px; text-decoration: none;" style-hover="background: #171110;">
+            <span style="font-size: 10.5px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: {{ accentColor }};">{{ s.length }}</span>
+            <h3 style="font-family: 'Big Shoulders Display', sans-serif; font-weight: 800; font-size: 19px; text-transform: uppercase; line-height: 1.05; margin: 0; color: #f5efe8;">{{ s.title }}</h3>
+            <span style="font-size: 12.5px; color: #a89b93; font-weight: 600;">See details &rarr;</span>
+          </a>
+        </sc-for>
+      </div>
     </div>
   </section>
 
@@ -557,7 +588,7 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;: {}, &quot;accentColor&quot;: {&quot;editor&quot;: &quot;color&quot;, &quot;default&quot;: &quot;#ff5a1f&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;options&quot;: [&quot;#ff5a1f&quot;, &quot;#ff8a4c&quot;, &quot;#e0392a&quot;, &quot;#c9a24a&quot;]}, &quot;heroCtaText&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Ignite Your Story&quot;, &quot;tsType&quot;: &quot;string&quot;}}">
 class Component extends DCLogic {
-  state = { openService: 0, openProject: 0, navVisible: false, mobileNavOpen: false, volcanoVisible: false, volcanoErupting: false, volcanoPuffs: [], volcanoEmbers: [] };
+  state = { openService: 0, openProject: 0, navVisible: false, mobileNavOpen: false, volcanoVisible: false, volcanoErupting: false, volcanoPuffs: [], volcanoEmbers: [], heroReady: false };
 
   componentDidMount() {
     this.onScroll = () => {
@@ -574,10 +605,20 @@ class Component extends DCLogic {
     };
     window.addEventListener('scroll', this.onScroll, { passive: true });
     this.onScroll();
+
+    // Load hero slides 2-4 only after the page has finished loading, so they
+    // never compete with the LCP image on the critical path.
+    this._heroTimer = null;
+    const revealHero = () => {
+      this._heroTimer = setTimeout(() => this.setState({ heroReady: true }), 1200);
+    };
+    if (document.readyState === 'complete') revealHero();
+    else window.addEventListener('load', revealHero, { once: true });
   }
 
   componentWillUnmount() {
     window.removeEventListener('scroll', this.onScroll);
+    if (this._heroTimer) clearTimeout(this._heroTimer);
   }
 
   eruptVolcano() {
@@ -599,12 +640,22 @@ class Component extends DCLogic {
       'assets/hero-slide-3.webp',
       'assets/hero-slide-4.webp'
     ];
-    const heroSlides = heroSlideImgs.map((img, i) => ({
-      img,
-      loading: i === 0 ? 'eager' : 'lazy',
+    const blank = 'data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2216%22 height=%229%22%3E%3C/svg%3E';
+    // Painted immediately so the LCP image isn't held back by the crossfade
+    // fading up from opacity 0; dropped once the carousel is running.
+    const heroBaseVisible = !this.state.heroReady;
+    const heroSlides = heroSlideImgs.map((img, i) => {
+      const small = img.replace('.webp', '-800.webp');
+      const deferred = i > 0 && !this.state.heroReady;
+      return {
+      img: deferred ? blank : img,
+      srcSet: deferred ? '' : `${small} 800w, ${img} 1600w`,
+      sizes: '100vw',
+      loading: 'eager',
       fetchPriority: i === 0 ? 'high' : 'low',
       anim: `heroSlide 24s linear infinite ${-(i * 6)}s, kenburns 24s ease-in-out infinite alternate`
-    }));
+      };
+    });
 
     const navVisible = this.state.navVisible;
     const navOpacity = navVisible ? 1 : 0;
@@ -651,7 +702,7 @@ class Component extends DCLogic {
     const projectData = [
       { index: '01', tag: 'Event', title: "Loop Head Together", desc: "The launch video from Loop Head Together's Sceene EIP event — an informative afternoon focused on their biochar soil project.", img: 'assets/logos/thumb-loop-head.webp', videoId: 'kst4XdqQ_j4' },
       { index: '02', tag: 'Product', title: 'Claddagh Jewellers', desc: 'Created for the Claddagh Jewellers in Galway City — a short product-style video highlighting their quality, tradition, and craftsmanship.', img: 'assets/logos/thumb-claddagh.webp', videoId: 'iqJ4m6UIsCU' },
-      { index: '03', tag: 'Music Video', title: "Zindagi — Shariq Jee", desc: "Filmed in Malbay Studios and on location in Kilkee and Kilrush. Zindagi is Shariq's own song, dedicated to his love.", img: 'https://i.ytimg.com/vi/aT68KEwEIsI/maxresdefault.jpg', videoId: 'aT68KEwEIsI' }
+      { index: '03', tag: 'Music Video', title: "Zindagi — Shariq Jee", desc: "Filmed in Malbay Studios and on location in Kilkee and Kilrush. Zindagi is Shariq's own song, dedicated to his love.", img: 'assets/logos/yt-aT68KEwEIsI.webp', videoId: 'aT68KEwEIsI' }
     ];
     const projects = projectData.map((p, i) => {
       const isOpen = this.state.openProject === i;
@@ -662,9 +713,11 @@ class Component extends DCLogic {
         playing,
         thumbDisplay: playing ? 'none' : 'block',
         playLabel: `Play video: ${p.title}`,
+        num: p.index,
+        peekImg: p.img,
         embedUrl: `https://www.youtube.com/embed/${p.videoId}?autoplay=1&rel=0&origin=${encodeURIComponent(typeof window !== 'undefined' ? window.location.origin : '')}`,
         play: () => this.setState({ playingProject: i }),
-        titleColor: isOpen ? '#f5efe8' : 'transparent',
+        titleColor: isOpen ? accentColor : '#f5efe8',
         iconRotate: isOpen ? 'rotate(45deg)' : 'rotate(0deg)',
         toggle: () => this.setState(st => ({ openProject: st.openProject === i ? -1 : i }))
       };
@@ -673,7 +726,7 @@ class Component extends DCLogic {
     const serviceData = [
       { length: '90 Sec – 3 Min · Impactful', title: 'Business Videos', desc: "We all have a story to tell. Tell yours with a professional business video — whether you're a start-up or a long-standing company, show your work to the world.", tags: ['brand film', 'internal comms', 'social content'], img: 'assets/service-business-videos.webp' },
       { length: '15–45 Sec · Innovative', title: 'Product Videos', desc: 'Rise above the rest with an eye-catching, memorable product video that builds your brand and gets your products sold.', tags: ['e-commerce', 'launch campaigns', 'social platforms'], img: 'assets/service-product-videos.webp' },
-      { length: '3–5 Min · Memorable', title: 'Music Videos', desc: "Solo artist or band, jazz or death metal — let's make a music video that captures the energy of your track and shares it with a worldwide audience.", tags: ['performance', 'narrative', 'all genres'], img: 'https://i.ytimg.com/vi/aT68KEwEIsI/maxresdefault.jpg' },
+      { length: '3–5 Min · Memorable', title: 'Music Videos', desc: "Solo artist or band, jazz or death metal — let's make a music video that captures the energy of your track and shares it with a worldwide audience.", tags: ['performance', 'narrative', 'all genres'], img: 'assets/logos/yt-aT68KEwEIsI.webp' },
       { length: 'Full Day Coverage · Documentary', title: 'Event Videos', desc: 'From community launches to conferences, we capture the day as it happens and cut it into a video that shows what the event was really about.', tags: ['launches', 'conferences', 'community'], img: 'uploads/tf.webp' },
       { length: 'Aerial Coverage · New', title: 'Drone Videos', desc: 'Sweeping aerial shots that give any project scale and drama — perfect for property, events, tourism, and landscapes across Clare and beyond. Drone footage, added to any package or shot standalone.', tags: ['aerial', 'property', 'tourism'], img: 'assets/drone-yoga.webp' },
       { length: 'Ongoing Support · New', title: 'Web Design & Maintenance', desc: 'From initial design and launch to continuous updates and support — we build websites and keep them secure, up-to-date, and running smoothly.', tags: ['web design', 'hosting', 'maintenance'], img: 'assets/service-web-design.webp' }
@@ -685,12 +738,19 @@ class Component extends DCLogic {
         isOpen,
         hasImg: !!s.img,
         noImg: !s.img,
-        slotId: `service-slot-${i}`,
-        titleColor: isOpen ? '#f5efe8' : 'transparent',
+        num: String(i + 1).padStart(2, '0'),
+        peekImg: s.img || 'assets/service-web-design.webp',
+        imgSrcSet: s.img && /(service-business-videos|service-product-videos|drone-yoga)\.webp$/.test(s.img)
+          ? `${s.img.replace('.webp', '-640.webp')} 640w, ${s.img} 1100w`
+          : '',
+        imgSizes: '(max-width: 900px) 100vw, 420px',
+        titleColor: isOpen ? accentColor : '#f5efe8',
         iconRotate: isOpen ? 'rotate(45deg)' : 'rotate(0deg)',
         toggle: () => this.setState(st => ({ openService: st.openService === i ? -1 : i }))
       };
     });
+    const servicesFeatured = services.slice(0, 3);
+    const servicesRest = services.slice(3);
 
     const clients = [
       { name: 'Claddagh', img: 'assets/logos/claddagh.webp', href: '#clients' },
@@ -715,7 +775,7 @@ class Component extends DCLogic {
     const volcanoCraterColor = this.state.volcanoErupting ? accentColor : '#170f0c';
     const volcanoShakeAnim = this.state.volcanoErupting ? 'lvShake 0.3s ease-in-out 2' : 'none';
     const onVolcanoClick = () => this.eruptVolcano();
-    return { accentColor, secondaryAccent, heroCtaText, heroSlides, sideNav, navOpacity, navPointerEvents, marqueeItems, features, trustInitials, trustLeft, trustRight, testimonials, projects, volcanoVisible, volcanoCraterColor, volcanoShakeAnim, volcanoPuffs: this.state.volcanoPuffs, volcanoEmbers: this.state.volcanoEmbers, onVolcanoClick, services, clients, mobileNavOpen, toggleMobileNav, closeMobileNav };
+    return { accentColor, secondaryAccent, heroCtaText, heroSlides, heroBaseVisible, servicesFeatured, servicesRest, sideNav, navOpacity, navPointerEvents, marqueeItems, features, trustInitials, trustLeft, trustRight, testimonials, projects, volcanoVisible, volcanoCraterColor, volcanoShakeAnim, volcanoPuffs: this.state.volcanoPuffs, volcanoEmbers: this.state.volcanoEmbers, onVolcanoClick, services, clients, mobileNavOpen, toggleMobileNav, closeMobileNav };
   }
 }
 </script>
