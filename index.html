@@ -166,10 +166,10 @@
     .lv-cta-mobile-btn { display: inline-flex !important; }
     .lv-cta-banner { aspect-ratio: 2064/563 !important; background-size: cover !important; min-height: 0 !important; }
     .lv-showreel { display: none !important; }
-    .lv-trust-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 14px !important; }
+    .lv-trust-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 16px !important; column-gap: 16px !important; row-gap: 16px !important; }
     .lv-trust-wide { grid-column: 1 / -1 !important; }
-    .lv-trust-square { aspect-ratio: 1 !important; min-height: 0 !important; }
     .lv-trust-card { min-height: 170px !important; padding: 22px 20px !important; }
+    .lv-trust-square { aspect-ratio: 1 !important; min-height: 0 !important; }
     .lv-trust-num { font-size: 80px !important; }
   }
   @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
@@ -195,7 +195,7 @@
     .lv-trust-grid { grid-template-columns: repeat(3, 1fr) !important; }
     .lv-trust-card, .lv-trust-wide { min-height: 190px !important; }
   }
-  .lv-trust-card { border-radius: 14px; box-shadow: 0 0 0 1px transparent; transition: box-shadow 0.15s ease, transform 0.15s ease; }
+  .lv-trust-card { border-radius: 14px; box-shadow: 0 0 0 1px transparent; transition: box-shadow 0.15s ease, transform 0.15s ease; overflow: hidden; isolation: isolate; }
   .lv-trust-card:hover { box-shadow: 0 0 0 1px rgba(245,239,232,0.55); transform: translateY(-2px); }
   @media (max-width: 620px) {
     .lv-row-inner { height: 62px; }
