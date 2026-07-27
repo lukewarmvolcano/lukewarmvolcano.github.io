@@ -22,7 +22,6 @@
 <meta property="og:description" content="Freelance videographer, camera operator and drone operator in Kilrush, Co. Clare — business, product, event and drone video for clients across Munster."/>
 <meta property="og:url" content="https://www.lukewarmvolcano.com/"/>
 <meta property="og:image" content="https://www.lukewarmvolcano.com/assets/service-business-videos.webp"/>
-<script src="./image-slot.js"></script>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:title" content="Videographer & Drone Operator, Co. Clare | Lukewarm Volcano"/>
 <meta name="twitter:description" content="Freelance videographer, camera operator and drone operator in Kilrush, Co. Clare — business, product, event and drone video for clients across Munster."/>
@@ -176,7 +175,6 @@
   @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
   @keyframes kenburns { from { transform: scale(1); } to { transform: scale(1.12); } }
   @keyframes heroSlide { 0% { opacity: 0; } 3% { opacity: 1; } 22% { opacity: 1; } 25% { opacity: 0; } 100% { opacity: 0; } }
-  @keyframes lvHeatDrift { 0% { transform: translate(0,0) scale(1); } 50% { transform: translate(-3%,-2%) scale(1.08); } 100% { transform: translate(0,0) scale(1); } }
   @keyframes lvMoltenShift { 0% { background-position: 0% 50%, 30% 60%; } 50% { background-position: 100% 50%, 70% 40%; } 100% { background-position: 0% 50%, 30% 60%; } }
   .lv-molten-btn { position: relative; overflow: hidden; background-color: #ff8a3d; background-image: radial-gradient(circle at 30% 60%, rgba(255,210,120,0.9), transparent 45%), linear-gradient(120deg, #ffb347, #ff5a1f 35%, #e0361a 60%, #ff8a3d 85%, #ffb347); background-size: 100% 100%, 220% 220%; animation: lvMoltenShift 5s ease-in-out infinite; color: #170f0c !important; }
   .lv-molten-btn span { position: relative; z-index: 1; }
@@ -197,6 +195,8 @@
     .lv-trust-grid { grid-template-columns: repeat(3, 1fr) !important; }
     .lv-trust-card, .lv-trust-wide { min-height: 190px !important; }
   }
+  .lv-trust-card { border-radius: 14px; box-shadow: 0 0 0 1px transparent; transition: box-shadow 0.15s ease, transform 0.15s ease; }
+  .lv-trust-card:hover { box-shadow: 0 0 0 1px rgba(245,239,232,0.55); transform: translateY(-2px); }
   @media (max-width: 620px) {
     .lv-row-inner { height: 62px; }
     .lv-row-btn { height: 62px; }
@@ -690,6 +690,7 @@
           <a href="services/" style="color: #170f0c;">Services</a>
           <a href="clients/" style="color: #170f0c;">Clients</a>
           <a href="about/" style="color: #170f0c;">About</a>
+          <a href="privacy/" style="color: #170f0c;">Privacy</a>
         </div>
       </div>
       <div>
@@ -930,7 +931,7 @@ class Component extends DCLogic {
         playLabel: `Play video: ${p.title}`,
         num: p.index,
         peekImg: p.img,
-        embedUrl: `https://www.youtube.com/embed/${p.videoId}?autoplay=1&rel=0&origin=${encodeURIComponent(typeof window !== 'undefined' ? window.location.origin : '')}`,
+        embedUrl: `https://www.youtube-nocookie.com/embed/${p.videoId}?autoplay=1&rel=0&origin=${encodeURIComponent(typeof window !== 'undefined' ? window.location.origin : '')}`,
         play: () => this.setState({ playingProject: i }),
         titleColor: isOpen ? accentColor : '#f5efe8',
         iconRotate: isOpen ? 'rotate(45deg)' : 'rotate(0deg)',
@@ -971,11 +972,9 @@ class Component extends DCLogic {
       { name: 'Claddagh', img: 'assets/logos/claddagh.webp', href: 'https://www.thecladdagh.com/' },
       { name: 'JJ Corry', img: 'assets/logos/jj-corry.webp', href: 'https://www.jjcorry.com/' },
       { name: 'Cliffs of Moher', img: 'assets/logos/cliffs-of-moher.webp', href: 'https://www.cliffsofmoher.ie/' },
-      { name: 'Qualibuild', img: 'assets/logos/qualibuild.webp', href: 'http://www.qualibuild.ie/' },
       { name: 'Hemp Higher Yoga', img: 'assets/logos/hemp-higher-yoga.webp', href: 'https://hemphigheryoga.ie/' },
       { name: 'AVEA', img: 'assets/logos/avea.webp', href: 'https://avea.ie/' },
       { name: 'Feel The Burren', img: 'assets/logos/feel-the-burren.webp', href: 'https://www.feeltheburren.ie/' },
-      { name: 'MHRA', img: 'assets/logos/mhra.webp', href: 'https://mhra.ie/' },
       { name: 'Considines Bakery', img: 'assets/logos/considines.webp', href: 'https://www.facebook.com/considinesbakery/' },
       { name: "Johnson's Bar", img: 'assets/logos/johnsons.webp', href: 'https://www.facebook.com/Johnsons-Bar-Kilrush-2095397207451139' },
       { name: 'West Coast Aqua Park', img: 'assets/logos/west-coast-aqua-park.webp', href: 'https://westcoastaquapark.ie/kilrush/' },
