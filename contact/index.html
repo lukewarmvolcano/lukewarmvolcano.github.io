@@ -135,6 +135,11 @@
   a[href^="mailto:"] { overflow-wrap: anywhere; max-width: 100%; }
   footer.site { overflow-wrap: anywhere; }
   @media (max-width: 620px) { a[href^="mailto:"] { font-size: 14.5px; } }
+  @media (max-width: 640px) {
+    .lv-contact-banner { min-height: 300px !important; background-position: center !important; justify-content: center !important; }
+    .lv-contact-banner-scrim { background: linear-gradient(180deg, rgba(13,11,10,0.25), rgba(13,11,10,0.75)) !important; }
+    .lv-contact-banner-text { max-width: 100% !important; margin-right: 0 !important; text-align: center !important; padding: 32px 24px !important; }
+  }
   /* a11y */
   .lv-skip{position:absolute;left:-9999px;top:0;z-index:100;padding:12px 20px;background:#ff5a1f;color:#0d0b0a;font-weight:800;border-radius:0 0 10px 0;text-decoration:none;}
   .lv-skip:focus{left:0;}
@@ -203,8 +208,9 @@
   </div>
 </section>
 <section class="wrap" style="padding-bottom:80px;">
-  <div style="position:relative;background-image:url('../assets/contact-banner.webp');background-size:cover;background-repeat:no-repeat;background-position:left center;min-height:clamp(160px,14vw,220px);border-radius:24px;overflow:hidden;display:flex;align-items:center;justify-content:flex-end;">
-    <div style="position:relative;z-index:1;max-width:34%;margin-right:5%;text-align:left;padding:16px;">
+  <div class="lv-contact-banner" style="position:relative;background-image:url('../assets/contact-banner.webp');background-size:cover;background-repeat:no-repeat;background-position:left center;min-height:clamp(160px,14vw,220px);border-radius:24px;overflow:hidden;display:flex;align-items:center;justify-content:flex-end;">
+    <div class="lv-contact-banner-scrim" style="position:absolute;inset:0;background:none;"></div>
+    <div class="lv-contact-banner-text" style="position:relative;z-index:1;max-width:34%;margin-right:5%;text-align:left;padding:16px;">
       <h2 class="h2" style="font-size:clamp(15px,1.6vw,20px);line-height:1.25;color:#f5efe8;margin:0 0 10px;text-wrap:pretty;">Ready When You Are</h2>
       <p style="font-size:clamp(11px,1vw,13px);line-height:1.5;color:#f5efe8;margin:0 0 14px;text-wrap:pretty;">From first call to final cut, every project gets David's full attention — no handoffs, no templates, just a story shot and cut with care.</p>
       <a href="tel:0834704688" style="display:inline-block;padding:12px 24px;background:#f5efe8;color:#170f0c;border-radius:999px;font-weight:800;font-size:13px;white-space:nowrap;text-decoration:none;">Free Quote</a>
