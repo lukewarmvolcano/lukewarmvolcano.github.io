@@ -173,6 +173,7 @@
     .lv-nav-links{display:none !important;}
     .lv-mobile-toggle{display:flex !important;}
   }
+  @media (max-width:760px){ .lv-seeit{grid-template-columns:1fr !important;} }
   .lv-home-fab{color:#ff5a1f;transition:color 0.15s ease;font-weight:700;display:inline-flex;align-items:center;gap:5px;text-decoration:none;} .lv-home-fab:hover{color:#ffb37a;} .lv-home-fab:hover svg{transform:translateX(-3px);} .lv-home-fab svg{transition:transform 0.15s ease;}
   /* email-wrap */
   a[href^="mailto:"] { overflow-wrap: anywhere; max-width: 100%; }
@@ -229,7 +230,26 @@
 </section>
 
 <section class="wrap" style="padding-bottom:56px;">
-  <h2 class="h2" style="font-size:clamp(24px,3.2vw,34px);margin:0 0 24px;">What Event Coverage Includes</h2>
+  <section class="wrap" style="padding-bottom:56px;">
+  <h2 class="h2" style="font-size:clamp(24px,3.2vw,34px);margin:0 0 24px;">See It In Action</h2>
+  <div class="lv-seeit" style="display:grid;grid-template-columns:1.1fr 1fr;gap:32px;align-items:center;">
+    <div style="border-radius:18px;overflow:hidden;background:#171110;border:1px solid rgba(245,239,232,0.1);">
+      <button type="button" class="vwrap" data-video-id="AYSJ1_JHy_g" aria-label="Play TedFest video" style="border:none;padding:0;width:100%;display:block;aspect-ratio:16/9;position:relative;cursor:pointer;background-image:url('../assets/case-tedfest.webp');background-size:cover;background-position:center;">
+        <div style="position:absolute;inset:0;background:rgba(13,11,10,0.3);display:flex;align-items:center;justify-content:center;">
+          <div style="width:60px;height:60px;border-radius:50%;background:#ff5a1f;display:flex;align-items:center;justify-content:center;"><div style="width:0;height:0;border-top:12px solid transparent;border-bottom:12px solid transparent;border-left:19px solid #0d0b0a;margin-left:4px;"></div></div>
+        </div>
+      </button>
+    </div>
+    <div>
+      <div style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#ff5a1f;margin-bottom:10px;">Full Day Coverage · TedFest</div>
+      <h3 class="h2" style="font-size:24px;margin:0 0 10px;">Filming Ireland's Most Ridiculous Festival</h3>
+      <p style="font-size:14.5px;margin:0 0 16px;">Documentary-style coverage of TedFest, the Father Ted themed festival on the Aran Islands — fast-moving, unscripted, full of energy.</p>
+      <a href="../work/tedfest/" style="font-size:13px;font-weight:700;">Read The Case Study &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<h2 class="h2" style="font-size:clamp(24px,3.2vw,34px);margin:0 0 24px;">What Event Coverage Includes</h2>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;">
     
   <div style="border-radius:18px;overflow:hidden;background:#171110;border:1px solid rgba(245,239,232,0.1);padding:28px;">
@@ -283,6 +303,22 @@
 <footer class="site">
   Lukewarm Volcano &middot; Kilrush, Co. Clare &middot; <a href="tel:0834704688">083-4704-688</a> &middot; <a href="mailto:david@lukewarmvolcano.com">david@lukewarmvolcano.com</a> &middot; <a href="../privacy/">Privacy</a>
 </footer>
+
+<script>
+document.querySelectorAll('.vwrap').forEach(function(el){
+  el.addEventListener('click', function(){
+    var id = el.getAttribute('data-video-id');
+    var f = document.createElement('iframe');
+    f.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0';
+    f.title = "TedFest video";
+    f.loading = 'lazy';
+    f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+    f.allowFullscreen = true;
+    f.style.cssText = 'width:100%;height:100%;border:0;display:block;aspect-ratio:16/9;';
+    el.replaceWith(f);
+  });
+});
+</script>
 <script>
 (function(){
   var btn = document.getElementById('lvMobileBtn');
