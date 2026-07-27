@@ -167,8 +167,9 @@
     .lv-cta-banner { aspect-ratio: 2064/563 !important; background-size: cover !important; min-height: 0 !important; }
     .lv-showreel { display: none !important; }
     .lv-trust-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 16px !important; column-gap: 16px !important; row-gap: 16px !important; }
-    .lv-trust-wide { grid-column: 1 / -1 !important; min-height: 110px !important; }
+    .lv-trust-wide { grid-column: 1 / -1 !important; }
     .lv-trust-card { min-height: 170px !important; padding: 22px 20px !important; }
+    .lv-trust-card.lv-trust-wide { min-height: 110px !important; }
     .lv-trust-square { aspect-ratio: 1 !important; min-height: 0 !important; }
     .lv-trust-num { font-size: 80px !important; }
   }
@@ -553,10 +554,12 @@
       </div>
       <div class="lv-trust-card lv-trust-wide" style="position: relative; min-height: 150px; min-width: 0; perspective: 1000px;">
         <div style="position: absolute; inset: 0; transform-style: preserve-3d; transition: transform 0.6s cubic-bezier(.2,.8,.2,1); transform: {{ trustCards.4.flipTransform }};">
-          <div style="position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; border-radius: 14px; overflow: hidden; padding: clamp(10px, 1.6vw, 24px) clamp(8px, 1.2vw, 16px); display: flex; flex-direction: column; min-width: 0; background: #e15a2b; justify-content: center; gap: 4px;">
-            <div style="font-family: 'Big Shoulders Display', sans-serif; font-weight: 900; font-size: clamp(22px, 3vw, 40px); color: #170f0c; line-height: 1;">50+</div>
-            <div style="font-weight: 800; font-size: clamp(9px, 1.1vw, 13px); text-transform: uppercase; color: #170f0c; margin-bottom: 10px;">Projects Delivered</div>
-            <a href="#contact" style="align-self: flex-end; margin-left: auto; padding: clamp(6px, 1vw, 10px) clamp(8px, 1.4vw, 16px); background: #170f0c; color: #f5efe8; border-radius: 999px; font-weight: 800; font-size: clamp(9px, 1vw, 12px); white-space: nowrap;">Get In Touch</a>
+          <div style="position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; border-radius: 14px; overflow: hidden; padding: clamp(10px, 1.6vw, 24px) clamp(8px, 1.2vw, 16px); display: flex; flex-direction: column; min-width: 0; background: #e15a2b; flex-direction: row; align-items: center; justify-content: space-between; gap: 12px;">
+            <div style="display: flex; flex-direction: column; gap: 2px; min-width: 0;">
+              <div style="font-family: 'Big Shoulders Display', sans-serif; font-weight: 900; font-size: clamp(22px, 3vw, 40px); color: #170f0c; line-height: 1;">50+</div>
+              <div style="font-weight: 800; font-size: clamp(9px, 1.1vw, 13px); text-transform: uppercase; color: #170f0c;">Projects Delivered</div>
+            </div>
+            <a href="#contact" style="flex-shrink: 0; padding: clamp(6px, 1vw, 10px) clamp(8px, 1.4vw, 16px); background: #170f0c; color: #f5efe8; border-radius: 999px; font-weight: 800; font-size: clamp(9px, 1vw, 12px); white-space: nowrap;">Get In Touch</a>
           </div>
           <div style="position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; border-radius: 14px; overflow: hidden; padding: clamp(10px, 1.6vw, 24px) clamp(8px, 1.2vw, 16px); display: flex; flex-direction: column; min-width: 0; background: #170f0c; border: 1px solid rgba(225,90,43,0.55); transform: rotateY(180deg); justify-content: center; gap: 6px;">
             <div style="font-family: 'Big Shoulders Display', sans-serif; font-weight: 800; font-size: clamp(11px, 1.2vw, 14px); letter-spacing: 0.6px; text-transform: uppercase; color: #e15a2b;">{{ trustCards.4.title }}</div>
