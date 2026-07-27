@@ -24,7 +24,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
-<script src="../image-slot.js"></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -94,7 +93,10 @@
   .client-tile .logo{width:100%;height:100%;background-position:center;background-size:contain;background-repeat:no-repeat;filter:grayscale(1) brightness(1.6);opacity:0.8;transition:filter 0.15s ease, opacity 0.15s ease;}
   .client-tile:hover .logo{filter:grayscale(0) brightness(1);opacity:1;}
 
-  .lv-home-fab{color:#a89b93;transition:color 0.15s ease;font-weight:700;display:inline-flex;align-items:center;gap:5px;text-decoration:none;} .lv-home-fab:hover{color:#ff5a1f;} .lv-home-fab:hover svg{transform:translateX(-3px);} .lv-home-fab svg{transition:transform 0.15s ease;}
+  .lv-case-card:hover{border-color:rgba(255,90,31,0.4);transform:translateY(-2px);}
+
+
+  .lv-home-fab{color:#ff5a1f;transition:color 0.15s ease;font-weight:700;display:inline-flex;align-items:center;gap:5px;text-decoration:none;} .lv-home-fab:hover{color:#ffb37a;} .lv-home-fab:hover svg{transform:translateX(-3px);} .lv-home-fab svg{transition:transform 0.15s ease;}
 
   #clientModalBackdrop{display:none;position:fixed;inset:0;background:rgba(13,11,10,0.72);backdrop-filter:blur(6px);z-index:200;align-items:center;justify-content:center;padding:24px;}
   #clientModalBackdrop.open{display:flex;}
@@ -160,6 +162,7 @@
     data-name="Claddagh Jewellers"
     data-desc="A Galway City jewellers — we produced a product-style video highlighting the quality, tradition, and craftsmanship behind their pieces. A pleasure to shoot something so detail-driven."
     data-link="https://www.thecladdagh.com/"
+    data-case="../work/claddagh-jewellers/"
     data-logo="../assets/logos/claddagh.webp">
     <div class="logo" style="background-image:url('../assets/logos/claddagh.webp');"></div>
   </button>
@@ -168,6 +171,7 @@
     data-name="JJ Corry"
     data-desc="An independent Irish whiskey bottler based in County Clare. Great to work with a brand that cares as much about craft and story as we do."
     data-link="https://www.jjcorry.com/"
+    data-case="../work/jj-corry/"
     data-logo="../assets/logos/jj-corry.webp">
     <div class="logo" style="background-image:url('../assets/logos/jj-corry.webp');"></div>
   </button>
@@ -176,14 +180,25 @@
     data-name="Cliffs of Moher Experience"
     data-desc="One of Ireland's biggest visitor attractions. We've made sustainability-focused videos and content promoting online bookings — always a pleasure working with their team."
     data-link="https://www.cliffsofmoher.ie/"
+    data-case="../work/cliffs-of-moher/"
     data-logo="../assets/logos/cliffs-of-moher.webp">
     <div class="logo" style="background-image:url('../assets/logos/cliffs-of-moher.webp');"></div>
+  </button>
+
+  <button type="button" class="client-tile" onclick="openClientModal(this)" aria-label="Read about TedFest"
+    data-name="TedFest"
+    data-desc="The Father Ted themed festival on the Aran Islands — a brilliant, chaotic weekend and always a great one to film."
+    data-link="https://tedfest.org/"
+    data-case="../work/tedfest/"
+    data-logo="../assets/logos/tedfest.webp">
+    <div class="logo" style="background-image:url('../assets/logos/tedfest.webp');"></div>
   </button>
 
   <button type="button" class="client-tile" onclick="openClientModal(this)" aria-label="Read about Considine's Bakery"
     data-name="Considine's Bakery"
     data-desc="A well-loved local bakery in Clare — full of character, and great fun to film."
     data-link="https://www.facebook.com/considinesbakery/"
+    data-case="../work/considines-bakery/"
     data-logo="../assets/logos/considines.webp">
     <div class="logo" style="background-image:url('../assets/logos/considines.webp');"></div>
   </button>
@@ -192,6 +207,7 @@
     data-name="Loop Head Together"
     data-desc="A community sustainability project on the Loop Head peninsula. We filmed the launch video for their Sceene EIP biochar soil event."
     data-link="https://www.loopheadtogether.ie/"
+    data-case="../work/loop-head-together/"
     data-logo="../assets/logos/loop-head-together.webp">
     <div class="logo" style="background-image:url('../assets/logos/loop-head-together.webp');"></div>
   </button>
@@ -225,38 +241,70 @@
     data-desc="A tourism initiative showcasing the Burren region — a great excuse to film some of the most striking landscapes in Clare."
     data-link="https://www.feeltheburren.ie/"
     data-logo="../assets/logos/feel-the-burren.webp">
-    <div class="logo" style="background-image:url('../assets/logos/feel-the-burren.webp');"></div>
+    <div class="logo" style="background-image:url('../assets/logos/feel-the-burren.webp');background-size:65% auto;"></div>
   </button>
 
   <button type="button" class="client-tile" onclick="openClientModal(this)" aria-label="Read about West Coast Aqua Park"
     data-name="West Coast Aqua Park"
     data-desc="Kilrush's floating water park — high energy, fast-paced, and a fun one to shoot for action and promo content."
     data-link="https://westlakeaquapark.ie/"
+    data-case="../work/west-coast-aqua-park/"
     data-logo="../assets/logos/west-coast-aqua-park.webp">
     <div class="logo" style="background-image:url('../assets/logos/west-coast-aqua-park.webp');"></div>
   </button>
 
-  <button type="button" class="client-tile" onclick="openClientModal(this)" aria-label="Read about Qualibuild"
-    data-name="Qualibuild"
-    data-desc="A construction and building company based in Clare — straightforward, professional, and great to collaborate with on-site."
-    data-link="https://www.igbc.ie/projects__trashed/qualibuild/"
-    data-logo="../assets/logos/qualibuild.webp">
-    <div class="logo" style="background-image:url('../assets/logos/qualibuild.webp');"></div>
-  </button>
-
-  <button type="button" class="client-tile" onclick="openClientModal(this)" aria-label="Read about MHRA"
-    data-name="MHRA"
-    data-desc="A trusted local partner — always a smooth, professional collaboration from brief to delivery."
-    data-link="https://charliemernagh.dudaone.com/contact"
-    data-logo="../assets/logos/mhra.webp">
-    <div class="logo" style="background-image:url('../assets/logos/mhra.webp');"></div>
+  <button type="button" class="client-tile" onclick="openClientModal(this)" aria-label="Read about Sonas Studio"
+    data-name="Sonas Studio"
+    data-desc="Kim Thittichai's studio — a website build, product photography and video, all in one project. Kim's a joy to work with, always full of ideas."
+    data-link="https://kimthitticai.com/"
+    data-case="../work/sonas-studio/"
+    data-logo="../assets/logos/sonas-studio.webp">
+    <div class="logo" style="background-image:url('../assets/logos/sonas-studio.webp');"></div>
   </button>
 
   </div>
 </section>
+
+<section class="wrap" style="padding-bottom:80px;">
+  <div style="text-align:center;max-width:600px;margin:0 auto 36px;">
+    <div style="font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#ff5a1f;">Behind The Logos</div>
+    <h2 class="h2" style="font-size:clamp(24px,3.2vw,34px);margin:14px 0 0;">A Few Of The Stories</h2>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;">
+    <a href="../work/tedfest/" style="display:flex;flex-direction:column;border-radius:16px;overflow:hidden;background:#171110;border:1px solid rgba(245,239,232,0.1);text-decoration:none;color:inherit;transition:border-color 0.15s ease,transform 0.15s ease;" class="lv-case-card">
+      <div style="aspect-ratio:16/10;background-image:url('../assets/case-tedfest.webp');background-size:cover;background-position:center;"></div>
+      <div style="padding:20px 22px 24px;">
+        <div style="font-size:11.5px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:#ff5a1f;margin-bottom:8px;">Festivals & Events</div>
+        <div style="font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:21px;text-transform:uppercase;line-height:1.15;margin-bottom:8px;">Filming Ireland's Most Ridiculous Festival</div>
+        <p style="font-size:14px;line-height:1.5;color:#c9beb5;margin:0 0 14px;">Four days on the Aran Islands for the Father Ted themed festival — and one of the highlights of the year.</p>
+        <span style="font-weight:700;font-size:13.5px;color:#f5efe8;">Read the story &rarr;</span>
+      </div>
+    </a>
+    <a href="../work/west-coast-aqua-park/" style="display:flex;flex-direction:column;border-radius:16px;overflow:hidden;background:#171110;border:1px solid rgba(245,239,232,0.1);text-decoration:none;color:inherit;transition:border-color 0.15s ease,transform 0.15s ease;" class="lv-case-card">
+      <div style="aspect-ratio:16/10;background-image:url('../assets/case-aqua-park.webp');background-size:cover;background-position:center;"></div>
+      <div style="padding:20px 22px 24px;">
+        <div style="font-size:11.5px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:#ff5a1f;margin-bottom:8px;">Tourism & Leisure</div>
+        <div style="font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:21px;text-transform:uppercase;line-height:1.15;margin-bottom:8px;">A Promo That Keeps Getting Watched</div>
+        <p style="font-size:14px;line-height:1.5;color:#c9beb5;margin:0 0 14px;">A drone-led promo for West Coast Aqua Park that’s passed 16,000 views on YouTube.</p>
+        <span style="font-weight:700;font-size:13.5px;color:#f5efe8;">Read the story &rarr;</span>
+      </div>
+    </a>
+    <a href="../work/considines-bakery/" style="display:flex;flex-direction:column;border-radius:16px;overflow:hidden;background:#171110;border:1px solid rgba(245,239,232,0.1);text-decoration:none;color:inherit;transition:border-color 0.15s ease,transform 0.15s ease;" class="lv-case-card">
+      <div style="aspect-ratio:16/10;background-image:url('../assets/case-considines-card.webp');background-size:cover;background-position:center;"></div>
+      <div style="padding:20px 22px 24px;">
+        <div style="font-size:11.5px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:#ff5a1f;margin-bottom:8px;">Food & Family Business</div>
+        <div style="font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:21px;text-transform:uppercase;line-height:1.15;margin-bottom:8px;">Two Hundred Years Of A Family Bakery</div>
+        <p style="font-size:14px;line-height:1.5;color:#c9beb5;margin:0 0 14px;">Telling the story of a family bakery that’s been baking in Kilrush for over two centuries.</p>
+        <span style="font-weight:700;font-size:13.5px;color:#f5efe8;">Read the story &rarr;</span>
+      </div>
+    </a></div>
+  <div style="text-align:center;margin-top:32px;">
+    <a href="../videos/" style="font-weight:700;font-size:14px;">See All Client Stories &rarr;</a>
+  </div>
+</section>
 </main>
 <footer class="site">
-  Lukewarm Volcano &middot; Kilrush, Co. Clare &middot; <a href="tel:0834704688">083-4704-688</a> &middot; <a href="mailto:david@lukewarmvolcano.com">david@lukewarmvolcano.com</a>
+  Lukewarm Volcano &middot; Kilrush, Co. Clare &middot; <a href="tel:0834704688">083-4704-688</a> &middot; <a href="mailto:david@lukewarmvolcano.com">david@lukewarmvolcano.com</a> &middot; <a href="../privacy/">Privacy</a>
 </footer>
 
 <div id="clientModalBackdrop" onclick="closeClientModal()">
@@ -265,7 +313,10 @@
     <div id="clientModalLogo"></div>
     <div id="clientModalName" style="font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:22px;text-transform:uppercase;margin-bottom:12px;"></div>
     <p id="clientModalDesc" style="margin:0 0 20px;"></p>
-    <a id="clientModalLink" target="_blank" rel="noopener" style="font-weight:700;font-size:14px;">Visit Website / Social &rarr;</a>
+    <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start;">
+      <a id="clientModalCase" style="display:none;font-weight:700;font-size:14px;">Read the case study &rarr;</a>
+      <a id="clientModalLink" target="_blank" rel="noopener" style="font-weight:700;font-size:14px;">Visit Website / Social &rarr;</a>
+    </div>
   </div>
 </div>
 
@@ -285,6 +336,8 @@ function openClientModal(tile){
   document.getElementById('clientModalName').textContent = tile.dataset.name;
   document.getElementById('clientModalDesc').textContent = tile.dataset.desc;
   document.getElementById('clientModalLink').href = tile.dataset.link;
+  var caseLink = document.getElementById('clientModalCase');
+  if (tile.dataset.case) { caseLink.href = tile.dataset.case; caseLink.style.display = 'inline'; } else { caseLink.style.display = 'none'; }
   document.getElementById('clientModalBackdrop').classList.add('open');
   document.body.style.overflow = 'hidden';
 }

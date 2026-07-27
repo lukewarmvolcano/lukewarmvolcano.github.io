@@ -24,7 +24,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
-<script src="../image-slot.js"></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -95,7 +94,7 @@
 
   
 
-  .lv-home-fab{color:#a89b93;transition:color 0.15s ease;font-weight:700;display:inline-flex;align-items:center;gap:5px;text-decoration:none;} .lv-home-fab:hover{color:#ff5a1f;} .lv-home-fab:hover svg{transform:translateX(-3px);} .lv-home-fab svg{transition:transform 0.15s ease;}
+  .lv-home-fab{color:#ff5a1f;transition:color 0.15s ease;font-weight:700;display:inline-flex;align-items:center;gap:5px;text-decoration:none;} .lv-home-fab:hover{color:#ffb37a;} .lv-home-fab:hover svg{transform:translateX(-3px);} .lv-home-fab svg{transition:transform 0.15s ease;}
   /* email-wrap */
   a[href^="mailto:"] { overflow-wrap: anywhere; max-width: 100%; }
   footer.site { overflow-wrap: anywhere; }
@@ -162,6 +161,7 @@
       <span style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:6px 12px;border:1px solid rgba(245,239,232,0.2);border-radius:999px;color:#c9beb5;">Event</span>
       <h3 class="h2" style="font-size:24px;margin:14px 0 8px;">Loop Head Together</h3>
       <p style="font-size:14.5px;margin:0;">The launch video from Loop Head Together's Sceene EIP event — an informative afternoon focused on their biochar soil project.</p>
+      <a href="../work/loop-head-together/" style="display:inline-block;margin-top:14px;font-weight:700;font-size:13.5px;">Read the case study &rarr;</a>
     </div>
   </div>
   <div style="border-radius:18px;overflow:hidden;background:#171110;border:1px solid rgba(245,239,232,0.1);">
@@ -307,7 +307,7 @@
 </section>
 </main>
 <footer class="site">
-  Lukewarm Volcano &middot; Kilrush, Co. Clare &middot; <a href="tel:0834704688">083-4704-688</a> &middot; <a href="mailto:david@lukewarmvolcano.com">david@lukewarmvolcano.com</a>
+  Lukewarm Volcano &middot; Kilrush, Co. Clare &middot; <a href="tel:0834704688">083-4704-688</a> &middot; <a href="mailto:david@lukewarmvolcano.com">david@lukewarmvolcano.com</a> &middot; <a href="../privacy/">Privacy</a>
 </footer>
 <script>
 (function(){
@@ -325,7 +325,7 @@ document.querySelectorAll('.vwrap').forEach(function(el){
   el.addEventListener('click', function(){
     var id = el.getAttribute('data-video-id');
     var iframe = document.createElement('iframe');
-    iframe.src = 'https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0';
+    iframe.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0';
     iframe.style.width = '100%';
     iframe.style.height = '100%';
     iframe.style.border = '0';
