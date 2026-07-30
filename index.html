@@ -326,7 +326,7 @@
   </div>
 
   <!-- ABOUT + FEATURES -->
-  <section id="about" style="padding: 64px clamp(20px, 6vw, 56px) 0;">
+  <section id="home-about" style="padding: 64px clamp(20px, 6vw, 56px) 0;">
     <div style="text-align: center; font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #93877f; margin-bottom: 64px;">
       Lukewarm Volcano &middot; Video Production Studio &middot; <span style="color: {{ accentColor }};">Slow Build. Big Eruption.</span> &middot; Kilrush, Co. Clare
     </div>
@@ -422,7 +422,7 @@
   </section>
 
   <!-- SERVICES -->
-  <section id="services" style="padding: 32px clamp(20px, 6vw, 56px) 72px; background: linear-gradient(160deg, #1c1310 0%, #171110 100%); border-top: 1px solid rgba(245,239,232,0.08); border-bottom: 1px solid rgba(245,239,232,0.08);">
+  <section id="home-services" style="padding: 32px clamp(20px, 6vw, 56px) 72px; background: linear-gradient(160deg, #1c1310 0%, #171110 100%); border-top: 1px solid rgba(245,239,232,0.08); border-bottom: 1px solid rgba(245,239,232,0.08);">
     <div style="text-align: center; max-width: 640px; margin: 0 auto clamp(20px, 6vw, 56px);">
       <span style="font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: {{ accentColor }};">What We Do Best</span>
       <h2 style="font-family: 'Big Shoulders Display', sans-serif; font-weight: 800; font-size: 46px; margin: 16px 0 12px; text-transform: uppercase; line-height: 1;">From Slow Burn To Big Reveal</h2>
@@ -824,8 +824,8 @@ class Component extends DCLogic {
 
     const sideNav = [
       { label: 'Work', href: '#work' },
-      { label: 'Services', href: '#services' },
-      { label: 'About', href: '#about' },
+      { label: 'Services', href: '#home-services' },
+      { label: 'About', href: '#home-about' },
       { label: 'Clients', href: '#clients' },
       { label: 'Contact', href: '#contact' }
     ];
@@ -947,7 +947,7 @@ class Component extends DCLogic {
     });
 
     const serviceData = [
-      { length: '90 Sec – 3 Min · Impactful', title: 'Business Videos', desc: "We all have a story to tell. Tell yours with a professional business video — whether you're a start-up or a long-standing company, show your work to the world.", tags: ['brand film', 'internal comms', 'social content'], img: 'assets/service-business-videos.webp' },
+      { length: '90 Sec – 3 Min · Impactful', title: 'Business Videos', desc: "We all have a story to tell. Tell yours with a professional business video — whether you're a start-up or a long-standing company, show your work to the world.", tags: ['brand film', 'internal comms', 'social content'], img: 'assets/case-considines.webp' },
       { length: '15–45 Sec · Innovative', title: 'Product Videos', desc: 'Rise above the rest with an eye-catching, memorable product video that builds your brand and gets your products sold.', tags: ['e-commerce', 'launch campaigns', 'social platforms'], img: 'assets/service-product-videos.webp' },
       { length: '3–5 Min · Memorable', title: 'Music Videos', desc: "Solo artist or band, jazz or death metal — let's make a music video that captures the energy of your track and shares it with a worldwide audience.", tags: ['performance', 'narrative', 'all genres'], img: 'assets/logos/yt-aT68KEwEIsI.webp' },
       { length: 'Full Day Coverage · Documentary', title: 'Event Videos', desc: 'From community launches to conferences, we capture the day as it happens and cut it into a video that shows what the event was really about.', tags: ['launches', 'conferences', 'community'], img: 'uploads/tf.webp' },
