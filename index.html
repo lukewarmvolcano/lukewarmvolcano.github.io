@@ -156,6 +156,7 @@
   * { box-sizing: border-box; }
   ::selection { background: #ff5a1f; color: #0d0b0a; }
   .lv-mobile-toggle { display: none; }
+  .lv-reviews-deck { display: none; }
   @media (max-width: 860px) {
     .lv-nav-links { display: none !important; }
     .lv-mobile-toggle { display: flex !important; }
@@ -195,22 +196,27 @@
   @media (max-width: 1180px) and (min-width: 621px) {
     .lv-trust-grid { grid-template-columns: repeat(3, 1fr) !important; }
     .lv-trust-card, .lv-trust-wide { min-height: 190px !important; }
+    .lv-clients-grid { grid-template-columns: repeat(4, 1fr) !important; }
   }
   .lv-trust-card { border-radius: 14px; box-shadow: 0 0 0 1px transparent; transition: box-shadow 0.15s ease, transform 0.15s ease; overflow: hidden; isolation: isolate; }
   .lv-trust-card:hover { box-shadow: 0 0 0 1px rgba(245,239,232,0.55); transform: translateY(-2px); }
   @media (max-width: 620px) {
+    .lv-clients-grid { grid-template-columns: repeat(2, 1fr) !important; }
+    .lv-reviews-marquee { display: none !important; }
+    .lv-reviews-deck { display: block !important; }
+    .lv-deck { height: 400px !important; }
+    .lv-deck-card { min-height: 340px !important; padding: 22px 20px 20px !important; gap: 10px !important; }
+    .lv-deck-hit { height: 340px !important; }
     .lv-row-inner { height: 62px; }
     .lv-row-btn { height: 62px; }
     .lv-mailbtn { padding: 16px 22px; font-size: 14px; }
     .lv-mailtext { font-size: 14.5px; }
     .lv-signature { flex-direction: column; align-items: flex-start; gap: 16px; }
-    .lv-deck { height: 440px; }
-    .lv-deck-card { min-height: 388px; }
-    .lv-deck-hit { height: 388px; }
     .lv-revtrack > div { width: 300px; }
     .lv-rowmeta { display: none !important; }
     .lv-panel { flex-direction: column !important; align-items: stretch !important; gap: 16px !important; }
     .lv-panel > div:first-child { width: 100% !important; max-width: none !important; }
+    .lv-deck-card p { font-size: 13.5px !important; -webkit-line-clamp: 8 !important; }
   }
   
   @keyframes lvPuffUp { 0% { transform: translate(-50%,0) scale(0.3); opacity: 0.7; } 100% { transform: translate(-50%,-70px) scale(1.6); opacity: 0; } }
@@ -479,9 +485,9 @@
       <h2 style="font-family: 'Big Shoulders Display', sans-serif; font-weight: 800; font-size: 38px; margin: 16px 0 12px; text-transform: uppercase; line-height: 1;">Clients Across Clare &amp; Beyond</h2>
       <a href="clients/" style="font-weight: 700; font-size: 14px; color: {{ accentColor }};">Meet Our Clients &rarr;</a>
     </div>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 16px;">
+    <div class="lv-clients-grid" style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; max-width: 720px; margin: 0 auto;">
       <sc-for list="{{ clients }}" as="c" hint-placeholder-count="12">
-        <a href="{{ c.href }}" target="_blank" rel="noopener" title="{{ c.name }}" style="border: 1px solid rgba(245,239,232,0.1); border-radius: 12px; padding: 20px 16px; height: 64px; display: block; background: rgba(245,239,232,0.03) url({{ c.img }}) center / contain no-repeat; filter: grayscale(1) brightness(1.6); opacity: 0.75;" style-hover="filter: grayscale(0) brightness(1); opacity: 1;"></a>
+        <a href="{{ c.href }}" target="_blank" rel="noopener" title="{{ c.name }}" style="border: 1px solid rgba(245,239,232,0.1); border-radius: 12px; padding: {{ c.pad }}; height: 64px; display: block; background: rgba(245,239,232,0.03) url({{ c.img }}) center / contain no-repeat; filter: grayscale(1) brightness(1.6); opacity: 0.75;" style-hover="filter: grayscale(0) brightness(1); opacity: 1;"></a>
       </sc-for>
     </div>
   </section>
@@ -594,8 +600,8 @@
         <span style="font-size: 12px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: #c9beb5;">{{ reviewAggregate }}</span>
       </div>
     </div>
-    <sc-if value="{{ showMarquee }}" hint-placeholder-val="{{ true }}">
-      <div class="lv-revmarquee" style="position: relative; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent); mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);">
+    <div class="lv-reviews-marquee">
+    <div class="lv-revmarquee" style="position: relative; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent); mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);">
         <div class="lv-revtrack" style="display: flex; gap: 20px; width: max-content; animation: lvRevScroll 110s linear infinite;">
           <sc-for list="{{ reviewLoop }}" as="t" hint-placeholder-count="6">
             <div style="width: 360px; flex-shrink: 0; background: linear-gradient(160deg, #1e1411, #171110); border: 1px solid rgba(245,239,232,0.1); border-radius: 20px; padding: 28px 26px 22px; display: flex; flex-direction: column; gap: 14px;">
@@ -616,8 +622,8 @@
           </sc-for>
         </div>
       </div>
-    </sc-if>
-    <sc-if value="{{ showDeck }}" hint-placeholder-val="{{ false }}">
+    </div>
+    <div class="lv-reviews-deck">
     <div style="max-width: 620px; margin: 0 auto;">
       <div class="lv-deck" style="position: relative; height: 336px;">
         <sc-for list="{{ testimonialDeck }}" as="t" hint-placeholder-count="3">
@@ -650,7 +656,7 @@
       </div>
       <div style="text-align: center; margin-top: 14px; font-size: 12px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; color: #7d716a;">{{ reviewCounter }}</div>
     </div>
-    </sc-if>
+    </div>
   </section>
 
   <!-- CONTACT / QUOTE -->
@@ -906,8 +912,8 @@ class Component extends DCLogic {
       });
     });
     const reviewStyle = this.props.reviewStyle ?? 'marquee';
-    const showDeck = reviewStyle === 'deck';
-    const showMarquee = reviewStyle === 'marquee';
+    const showDeck = true;
+    const showMarquee = true;
     const reviewLoop = testimonials.concat(testimonials).map(withBadge);
     const setReview = (n) => this.setState({ reviewIndex: ((n % rTotal) + rTotal) % rTotal });
     const nextReview = () => setReview(rIdx + 1);
@@ -951,7 +957,7 @@ class Component extends DCLogic {
       { length: '15–45 Sec · Innovative', title: 'Product Videos', desc: 'Rise above the rest with an eye-catching, memorable product video that builds your brand and gets your products sold.', tags: ['e-commerce', 'launch campaigns', 'social platforms'], img: 'assets/service-product-videos.webp' },
       { length: '3–5 Min · Memorable', title: 'Music Videos', desc: "Solo artist or band, jazz or death metal — let's make a music video that captures the energy of your track and shares it with a worldwide audience.", tags: ['performance', 'narrative', 'all genres'], img: 'assets/logos/yt-aT68KEwEIsI.webp' },
       { length: 'Full Day Coverage · Documentary', title: 'Event Videos', desc: 'From community launches to conferences, we capture the day as it happens and cut it into a video that shows what the event was really about.', tags: ['launches', 'conferences', 'community'], img: 'uploads/tf.webp' },
-      { length: 'Aerial Coverage · New', title: 'Drone Videos', desc: 'Sweeping aerial shots that give any project scale and drama — perfect for property, events, tourism, and landscapes across Clare and beyond. Drone footage, added to any package or shot standalone.', tags: ['aerial', 'property', 'tourism'], img: 'assets/drone-yoga.webp' },
+      { length: 'Aerial Coverage · New', title: 'Drone Videos', desc: 'Sweeping aerial shots that give any project scale and drama — perfect for property, events, tourism, and landscapes across Clare and beyond. Drone footage, added to any package or shot standalone.', tags: ['aerial', 'property', 'tourism'], img: 'assets/case-aqua-park.webp' },
       { length: 'Ongoing Support · New', title: 'Web Design & Maintenance', desc: 'From initial design and launch to continuous updates and support — we build websites and keep them secure, up-to-date, and running smoothly.', tags: ['web design', 'hosting', 'maintenance'], img: 'assets/service-web-design.webp' }
     ];
     const services = serviceData.map((s, i) => {
@@ -979,14 +985,14 @@ class Component extends DCLogic {
       { name: 'Claddagh', img: 'assets/logos/claddagh.webp', href: 'https://www.thecladdagh.com/' },
       { name: 'JJ Corry', img: 'assets/logos/jj-corry.webp', href: 'https://www.jjcorry.com/' },
       { name: 'Cliffs of Moher', img: 'assets/logos/cliffs-of-moher.webp', href: 'https://www.cliffsofmoher.ie/' },
-      { name: 'Hemp Higher Yoga', img: 'assets/logos/hemp-higher-yoga.webp', href: 'https://hemphigheryoga.ie/' },
-      { name: 'AVEA', img: 'assets/logos/avea.webp', href: 'https://avea.ie/' },
-      { name: 'Feel The Burren', img: 'assets/logos/feel-the-burren.webp', href: 'https://www.feeltheburren.ie/' },
       { name: 'Considines Bakery', img: 'assets/logos/considines.webp', href: 'https://www.facebook.com/considinesbakery/' },
+      { name: 'AVEA', img: 'assets/logos/avea.webp', href: 'https://avea.ie/' },
+      { name: 'Feel The Burren', img: 'assets/logos/feel-the-burren.webp', href: 'https://www.feeltheburren.ie/', pad: '26px 20px' },
+      { name: 'Hemp Higher Yoga', img: 'assets/logos/hemp-higher-yoga.webp', href: 'https://hemphigheryoga.ie/' },
       { name: "Johnson's Bar", img: 'assets/logos/johnsons.webp', href: 'https://www.facebook.com/Johnsons-Bar-Kilrush-2095397207451139' },
       { name: 'West Coast Aqua Park', img: 'assets/logos/west-coast-aqua-park.webp', href: 'https://westcoastaquapark.ie/kilrush/' },
       { name: 'Loop Head Together', img: 'assets/logos/loop-head-together.webp', href: 'https://www.loopheadtogether.ie/' }
-    ];
+    ].map(c => ({ ...c, pad: c.pad || '20px 16px' }));
 
     const mobileNavOpen = this.state.mobileNavOpen;
     const toggleMobileNav = () => this.setState(s => ({ mobileNavOpen: !s.mobileNavOpen }));
