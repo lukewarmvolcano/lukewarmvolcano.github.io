@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Free Quote | Videographer &amp; Drone Operator, Co. Clare | Lukewarm Volcano</title>
+<meta name="description" content="Get a free quote for video production in Kilrush, Co. Clare. Starting prices for drone footage, Starter, Standard and Full Package, with everything each one includes."/>
+<link rel="canonical" href="https://www.lukewarmvolcano.com/quote/"/>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png"/>
+<link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; background: #0d0b0a; }
+  * { box-sizing: border-box; }
+  ::selection { background: #ff5a1f; color: #0d0b0a; }
+  :focus-visible { outline: 3px solid #ff5a1f; outline-offset: 3px; border-radius: 4px; }
+  a { color: #ff8a4c; text-decoration: none; }
+  a:hover { color: #ff5a1f; }
+  input, select, textarea { font-family: 'Manrope', sans-serif; }
+  input::placeholder, textarea::placeholder { color: #6f635c; }
+  @keyframes lvMoltenShift { 0% { background-position: 0% 50%, 30% 60%; } 50% { background-position: 100% 50%, 70% 40%; } 100% { background-position: 0% 50%, 30% 60%; } }
+  .lv-molten-btn { position: relative; overflow: hidden; border: none; cursor: pointer; background-color: #ff8a3d; background-image: radial-gradient(circle at 30% 60%, rgba(255,210,120,0.9), transparent 45%), linear-gradient(120deg, #ffb347, #ff5a1f 35%, #e0361a 60%, #ff8a3d 85%, #ffb347); background-size: 100% 100%, 220% 220%; animation: lvMoltenShift 5s ease-in-out infinite; color: #170f0c !important; }
+  .lv-molten-btn span { position: relative; z-index: 1; }
+  .lv-grain { position: fixed; inset: 0; z-index: 999; pointer-events: none; opacity: 0.065; mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+  .lv-texture { position: fixed; inset: 0; z-index: 998; pointer-events: none; opacity: 0.035; mix-blend-mode: overlay;
+    background-image: repeating-linear-gradient(115deg, rgba(255,255,255,0.5) 0px, rgba(255,255,255,0.5) 1px, transparent 1px, transparent 5px); }
+  @media (max-width: 1120px) {
+    .lv-quote-grid { grid-template-columns: 1fr !important; }
+    .lv-form-row { grid-template-columns: 1fr !important; }
+  }
+  @media (max-width: 900px) {
+    .lv-nav-links { display: none !important; }
+    .lv-incl-grid { grid-template-columns: 1fr !important; }
+  }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }
+</style>
+</helmet>
+
+<div data-screen-label="Quote" style="font-family:'Manrope',sans-serif;color:#f5efe8;overflow-x:hidden;position:relative;background:radial-gradient(90% 55% at 12% 0%, rgba(255,90,31,0.16), transparent 60%), radial-gradient(80% 45% at 90% 15%, rgba(224,57,42,0.12), transparent 55%), radial-gradient(70% 40% at 50% 100%, rgba(255,138,76,0.09), transparent 60%), linear-gradient(180deg, #170f0c 0%, #100b09 35%, #0d0b0a 100%);">
+  <div class="lv-grain"></div>
+  <div class="lv-texture"></div>
+
+  <header style="position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:22px clamp(20px, 6vw, 56px);background:rgba(13,11,10,0.85);backdrop-filter:blur(10px);border-bottom:1px solid rgba(245,239,232,0.08);">
+    <div style="display:flex;align-items:center;gap:12px;">
+      <picture><source srcset="../assets/lv-logo-sm.webp" type="image/webp"/><img src="../assets/lv-logo-sm.png" alt="Lukewarm Volcano logo" width="39" height="44" style="height:44px;width:auto;display:block;"/></picture>
+      <div style="font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:22px;line-height:0.9;letter-spacing:0.5px;">LUKEWARM<br><span style="color:#ff5a1f;">VOLCANO</span></div>
+    </div>
+    <nav class="lv-nav-links" style="display:flex;align-items:center;gap:36px;">
+      <a href="../videos/" style="color:#f5efe8;font-weight:600;font-size:15px;">Videos</a>
+      <a href="../services/" style="color:#f5efe8;font-weight:600;font-size:15px;">Services</a>
+      <a href="../clients/" style="color:#f5efe8;font-weight:600;font-size:15px;">Clients</a>
+      <a href="../about/" style="color:#f5efe8;font-weight:600;font-size:15px;">About</a>
+    </nav>
+    <a href="tel:0834704688" style="padding:12px 26px;background:#ff5a1f;color:#0d0b0a;border-radius:999px;font-weight:800;font-size:14px;white-space:nowrap;">Call 083-4704-688</a>
+  </header>
+
+  <main>
+
+  <section style="padding:80px clamp(20px, 6vw, 56px) 56px;">
+    <span style="font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#ff5a1f;">Free Quote &middot; Kilrush, Co. Clare</span>
+    <h1 style="font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:clamp(48px, 9vw, 116px);line-height:1.02;margin:18px 0 0;text-transform:uppercase;">Let&rsquo;s Plan It<br>Together</h1>
+    <div class="lv-quote-grid" style="display:grid;grid-template-columns:1fr auto;gap:44px;align-items:end;margin-top:40px;padding-top:34px;border-top:1px solid rgba(245,239,232,0.12);">
+      <p style="font-size:19px;line-height:1.6;color:#c9beb5;max-width:560px;margin:0;">Every quote is built around the actual shoot: how many days, how many locations, and how much gets written, planned and packed before the camera comes out of the bag. Fixed price, itemised, no packages you don&rsquo;t need.</p>
+      <div style="display:flex;gap:16px;flex-wrap:wrap;">
+        <a href="tel:0834704688" class="lv-molten-btn" style="padding:18px 34px;border-radius:999px;font-weight:800;font-size:16px;white-space:nowrap;"><span>Call 083-4704-688</span></a>
+        <a href="mailto:david@lukewarmvolcano.com" style="padding:18px 34px;border:1px solid rgba(245,239,232,0.3);color:#f5efe8;border-radius:999px;font-weight:700;font-size:16px;white-space:nowrap;">Email David</a>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:32px clamp(20px, 6vw, 56px) 72px;background:linear-gradient(160deg, #1c1310 0%, #171110 100%);border-top:1px solid rgba(245,239,232,0.08);border-bottom:1px solid rgba(245,239,232,0.08);">
+    <div style="text-align:center;max-width:640px;margin:0 auto 44px;">
+      <span style="font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#ff5a1f;">Where Projects Start</span>
+      <h2 style="font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:46px;margin:16px 0 12px;text-transform:uppercase;line-height:1;">Honest Starting Prices</h2>
+      <p style="font-size:16px;color:#a89b93;margin:0;">Each package builds on the one before it. Tap any row to see everything it includes.</p>
+    </div>
+    <div style="border-top:1px solid rgba(245,239,232,0.12);max-width:1240px;margin:0 auto;">
+      <div style="border-bottom:1px solid rgba(245,239,232,0.12);">
+        <button type="button" onClick="{{ toggle0 }}" aria-expanded="{{ open0 }}" style="width:100%;background:none;border:none;cursor:pointer;font:inherit;color:inherit;text-align:left;display:flex;align-items:center;flex-wrap:wrap;gap:clamp(12px, 2vw, 24px);padding:22px clamp(12px, 2.2vw, 26px);">
+          <span style="flex-shrink:0;width:6px;height:44px;border-radius:999px;background:#5b9dc9;"></span>
+          <span style="flex-shrink:0;font-size:12px;font-weight:700;letter-spacing:1px;color:#5b9dc9;width:22px;">01</span>
+          <span class="lv-row-name" style="flex:1;min-width:0;">
+            <span style="display:block;font-size:11px;font-weight:700;letter-spacing:1.3px;text-transform:uppercase;color:#7d716a;">Aerial work</span>
+            <span style="display:block;font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:clamp(24px, 3vw, 34px);text-transform:uppercase;line-height:1.05;">Drone Footage</span>
+          </span>
+          <span style="flex-shrink:0;font-size:11px;font-weight:700;letter-spacing:1.1px;text-transform:uppercase;color:#7d716a;white-space:nowrap;">Editing not included</span>
+          <span style="flex-shrink:0;text-align:right;">
+            <span style="display:block;font-size:10.5px;font-weight:700;letter-spacing:1.3px;text-transform:uppercase;color:#7d716a;">Starting from</span>
+            <span style="display:block;font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:clamp(30px, 3.4vw, 44px);line-height:1;color:#5b9dc9;">€150</span>
+          </span>
+          <span style="flex-shrink:0;width:32px;height:32px;border-radius:50%;border:1px solid rgba(245,239,232,0.35);display:flex;align-items:center;justify-content:center;font-size:18px;line-height:1;color:#5b9dc9;">{{ icon0 }}</span>
+        </button>
+        <sc-if value="{{ open0 }}" hint-placeholder-val="{{ false }}">
+        <div style="padding:2px clamp(12px, 2.2vw, 26px) 30px clamp(24px, 4vw, 56px);">
+          
+          <div style="font-size:11px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:#5b9dc9;margin-bottom:16px;">What&rsquo;s included</div>
+          <div class="lv-incl-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:12px 40px;max-width:900px;">
+            <div style="display:flex;gap:12px;align-items:flex-start;font-size:15.5px;line-height:1.55;color:#c9beb5;">
+              <span style="color:#5b9dc9;font-weight:800;flex-shrink:0;">&#10003;</span><span>Aerial shots flown on the day of your shoot</span>
+            </div>
+            <div style="display:flex;gap:12px;align-items:flex-start;font-size:15.5px;line-height:1.55;color:#c9beb5;">
+              <span style="color:#5b9dc9;font-weight:800;flex-shrink:0;">&#10003;</span><span>Licensed, insured drone operator</span>
+            </div>
+            <div style="display:flex;gap:12px;align-items:flex-start;font-size:15.5px;line-height:1.55;color:#c9beb5;">
+              <span style="color:#5b9dc9;font-weight:800;flex-shrink:0;">&#10003;</span><span>Several passes so there is a choice in the edit</span>
+            </div>
+            <div style="display:flex;gap:12px;align-items:flex-start;font-size:15.5px;line-height:1.55;color:#c9beb5;">
+              <span style="color:#5b9dc9;font-weight:800;flex-shrink:0;">&#10003;</span><span>Raw aerial footage supplied, ready for your own editor</span>
+            </div>
+            <div style="display:flex;gap:12px;align-items:flex-start;font-size:15.5px;line-height:1.55;color:#c9beb5;">
+              <span style="color:#5b9dc9;font-weight:800;flex-shrink:0;">&#10003;</span><span>Booked on its own, or added to any package below</span>
+            </div>
+          </div>
+          <div style="margin-top:20px;border-left:3px solid #5b9dc9;padding:2px 0 2px 16px;font-size:14.5px;line-height:1.6;color:#a89b93;max-width:640px;">Book it on its own for raw aerial footage, or add it to any package below and the aerials get cut into your finished film. Editing is only included when it goes with a package.</div>
+          <a href="#quote-form" style="display:inline-block;margin-top:24px;padding:13px 26px;border-radius:999px;background:#5b9dc9;color:#0d0b0a;font-weight:800;font-size:13.5px;letter-spacing:0.4px;text-transform:uppercase;">Get Drone Footage quoted</a>
+        </div>
+        </sc-if>
+      </div>
+      <div style="border-bottom:1px solid rgba(245,239,232,0.12);">
+        <button type="button" onClick="{{ toggle1 }}" aria-expanded="{{ open1 }}" style="width:100%;background:none;border:none;cursor:pointer;font:inherit;color:inherit;text-align:left;display:flex;align-items:center;flex-wrap:wrap;gap:clamp(12px, 2vw, 24px);padding:22px clamp(12px, 2.2vw, 26px);">
+          <span style="flex-shrink:0;width:6px;height:44px;border-radius:999px;background:#e8a33d;"></span>
+          <span style="flex-shrink:0;font-size:12px;font-weight:700;letter-spacing:1px;color:#e8a33d;width:22px;">02</span>
+          <span class="lv-row-name" style="flex:1;min-width:0;">
+            <span style="display:block;font-size:11px;font-weight:700;letter-spacing:1.3px;text-transform:uppercase;color:#7d716a;">Tier one · the essentials</span>
+            <span style="display:block;font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:clamp(24px, 3vw, 34px);text-transform:uppercase;line-height:1.05;">Starter</span>
+          </span>
+          <span style="flex-shrink:0;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:800;letter-spacing:1.1px;text-transform:uppercase;color:#e8a33d;border:1px solid #e8a33d;border-radius:999px;padding:6px 13px;white-space:nowrap;"><span>&#10003;</span>Editing included</span>
+          <span style="flex-shrink:0;text-align:right;">
+            <span style="display:block;font-size:10.5px;font-weight:700;letter-spacing:1.3px;text-transform:uppercase;color:#7d716a;">Starting from</span>
+            <span style="display:block;font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:clamp(30px, 3.4vw, 44px);line-height:1;color:#e8a33d;">€650</span>
+          </span>
+          <span style="flex-shrink:0;width:32px;height:32px;border-radius:50%;border:1px solid rgba(245,239,232,0.35);display:flex;align-items:center;justify-content:center;font-size:18px;line-height:1;color:#e8a33d;">{{ icon1 }}</span>
+        </button>
+        <sc-if value="{{ open1 }}" hint-placeholder-val="{{ false }}">
+        <div style="padding:2px clamp(12px, 2.2vw, 26px) 30px clamp(24px, 4vw, 56px);">
+          
+          <div style="font-size:11px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:#e8a33d;margin-bottom:16px;">What&rsquo;s included</div>
+          <div class="lv-incl-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:12px 40px;max-width:900px;">
+            <div style="display:flex;gap:12px;align-items:flex-start;font-size:15.5px;line-height:1.55;color:#c9beb5;">
+              <span style="color:#e8a33d;font-weight:800;flex-shrink:0;">&#10003;</span><span>Half a day on site, one location</span>
+            </div>
+            <div style="display:flex;gap:12px;align-items:flex-start;font-size:15.5px;line-height:1.55;color:#c9beb5;">
+              <span style="color:#e8a33d;font-weight:800;flex-shrink:0;">&#10003;</span><span>Shot list and plan agreed before the day</span>
+            </div>
+            <div style="display:flex;gap:12px;align-items:flex-start;font-size:15.5px;line-height:1.55;color:#c9beb5;">
+              <span style="color:#e8a33d;font-weight:800;flex-shrink:0;">&#10003;</span><span>One finished film, up to 90 seconds</span>
+            </div>
+            <div style="display:flex;gap:12px;align-items:flex-start;font-size:15.5px;line-height:1.55;color:#c9beb5;">
+              <span style="color:#e8a33d;font-weight:800;flex-shrink:0;">&#10003;</span><span>Full edit, colour grade and licensed music</span>
+            </div>
+            <div style="display:flex;gap:12px;align-items:flex-start;font-size:15.5px;line-height:1.55;color:#c9beb5;">
+              <span style="color:#e8a33d;font-weight:800;flex-shrink:0;">&#10003;</span><span>Delivered in the formats you need</span>
+            </div>
+          </div>
+          <a href="#quote-form" style="display:inline-block;margin-top:24px;padding:13px 26px;border-radius:999px;background:#e8a33d;color:#0d0b0a;font-weight:800;font-size:13.5px;letter-spacing:0.4px;text-transform:uppercase;">Get Starter quoted</a>
+        </div>
+        </sc-if>
+      </div>
+      <div style="border-bottom:1px solid rgba(245,239,232,0.12);">
+        <button type="button" onClick="{{ toggle2 }}" aria-expanded="{{ open2 }}" style="width:100%;background:none;border:none;cursor:pointer;font:inherit;color:inherit;text-align:left;display:flex;align-items:center;flex-wrap:wrap;gap:clamp(12px, 2vw, 24px);padding:22px clamp(12px, 2.2vw, 26px);">
+          <span style="flex-shrink:0;width:6px;height:44px;border-radius:999px;background:#ff5a1f;"></span>
+          <span style="flex-shrink:0;font-size:12px;font-weight:700;letter-spacing:1px;color:#ff5a1f;width:22px;">03</span>
+          <span class="lv-row-name" style="flex:1;min-width:0;">
+            <span style="display:block;font-size:11px;font-weight:700;letter-spacing:1.3px;text-transform:uppercase;color:#7d716a;">Tier two · most booked</span>
+            <span style="display:block;font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:clamp(24px, 3vw, 34px);text-transform:uppercase;line-height:1.05;">Standard</span>
+          </span>
+          <span style="flex-shrink:0;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:800;letter-spacing:1.1px;text-transform:uppercase;color:#ff5a1f;border:1px solid #ff5a1f;border-radius:999px;padding:6px 13px;white-space:nowrap;"><span>&#10003;</span>Editing included</span>
+          <span style="flex-shrink:0;text-align:right;">
+            <span style="display:block;font-size:10.5px;font-weight:700;letter-spacing:1.3px;text-transform:uppercase;color:#7d716a;">Starting from</span>
+            <span style="display:block;font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:clamp(30px, 3.4vw, 44px);line-height:1;color:#ff5a1f;">€1,200</span>
+          </span>
+          <span style="flex-shrink:0;width:32px;height:32px;border-radius:50%;border:1px solid rgba(245,239,232,0.35);display:flex;align-items:center;justify-content:center;font-size:18px;line-height:1;color:#ff5a1f;">{{ icon2 }}</span>
+        </button>
+        <sc-if value="{{ open2 }}" hint-placeholder-val="{{ false }}">
+        <div style="padding:2px clamp(12px, 2.2vw, 26px) 30px clamp(24px, 4vw, 56px);">
+          
+          <div style="display:inline-flex;align-items:center;gap:10px;margin-bottom:18px;padding:9px 16px;border-radius:999px;background:rgba(245,239,232,0.06);border:1px solid #ff5a1f;font-size:12.5px;font-weight:800;letter-spacing:0.8px;text-transform:uppercase;color:#ff5a1f;"><span style="font-size:15px;line-height:1;">&#8593;</span>Everything in Starter, plus</div>
+          <div style="font-size:11px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:#ff5a1f;margin-bottom:16px;">What&rsquo;s included</div>
+          <div class="lv-incl-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:12px 40px;max-width:900px;">
+            <div style="display:flex;gap:12px;align-items:flex-start;font-size:15.5px;line-height:1.55;color:#c9beb5;">
+              <span style="color:#ff5a1f;font-weight:800;flex-shrink:0;">&#10003;</span><span>A full shoot day instead of a half day</span>
+            </div>
+            <div style="display:flex;gap:12px;align-items:flex-start;font-size:15.5px;line-height:1.55;color:#c9beb5;">
+              <span style="color:#ff5a1f;font-weight:800;flex-shrink:0;">&#10003;</span><span>A second location if the story needs one</span>
+            </div>
+            <div style="display:flex;gap:12px;align-items:flex-start;font-size:15.5px;line-height:1.55;color:#c9beb5;">
+              <span style="color:#ff5a1f;font-weight:800;flex-shrink:0;">&#10003;</span><span>Script and storyboards, not just a shot list</span>
+            </div>
+            <div style="display:flex;gap:12px;align-items:flex-start;font-size:15.5px;line-height:1.55;color:#c9beb5;">
+              <span style="color:#ff5a1f;font-weight:800;flex-shrink:0;">&#10003;</span><span>A longer film, up to three minutes</span>
+            </div>
+            <div style="display:flex;gap:12px;align-items:flex-start;font-size:15.5px;line-height:1.55;color:#c9beb5;">
+              <span style="color:#ff5a1f;font-weight:800;flex-shrink:0;">&#10003;</span><span>Titles and on-screen graphics</span>
+            </div>
+            <div style="display:flex;gap:12px;align-items:flex-start;font-size:15.5px;line-height:1.55;color:#c9beb5;">
+              <span style="color:#ff5a1f;font-weight:800;flex-shrink:0;">&#10003;</span><span>Three social cutdowns, vertical and square</span>
+            </div>
+            <div style="display:flex;gap:12px;align-items:flex-start;font-size:15.5px;line-height:1.55;color:#c9beb5;">
+              <span style="color:#ff5a1f;font-weight:800;flex-shrink:0;">&#10003;</span><span>Voiceover recorded if the film needs it</span>
+            </div>
+          </div>
+          <a href="#quote-form" style="display:inline-block;margin-top:24px;padding:13px 26px;border-radius:999px;background:#ff5a1f;color:#0d0b0a;font-weight:800;font-size:13.5px;letter-spacing:0.4px;text-transform:uppercase;">Get Standard quoted</a>
+        </div>
+        </sc-if>
+      </div>
+      <div style="border-bottom:1px solid rgba(245,239,232,0.12);">
+        <button type="button" onClick="{{ toggle3 }}" aria-expanded="{{ open3 }}" style="width:100%;background:none;border:none;cursor:pointer;font:inherit;color:inherit;text-align:left;display:flex;align-items:center;flex-wrap:wrap;gap:clamp(12px, 2vw, 24px);padding:22px clamp(12px, 2.2vw, 26px);">
+          <span style="flex-shrink:0;width:6px;height:44px;border-radius:999px;background:#e0392a;"></span>
+          <span style="flex-shrink:0;font-size:12px;font-weight:700;letter-spacing:1px;color:#e0392a;width:22px;">04</span>
+          <span class="lv-row-name" style="flex:1;min-width:0;">
+            <span style="display:block;font-size:11px;font-weight:700;letter-spacing:1.3px;text-transform:uppercase;color:#7d716a;">Tier three · the works</span>
+            <span style="display:block;font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:clamp(24px, 3vw, 34px);text-transform:uppercase;line-height:1.05;">Full Package</span>
+          </span>
+          <span style="flex-shrink:0;display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:800;letter-spacing:1.1px;text-transform:uppercase;color:#e0392a;border:1px solid #e0392a;border-radius:999px;padding:6px 13px;white-space:nowrap;"><span>&#10003;</span>Editing included</span>
+          <span style="flex-shrink:0;text-align:right;">
+            <span style="display:block;font-size:10.5px;font-weight:700;letter-spacing:1.3px;text-transform:uppercase;color:#7d716a;">Starting from</span>
+            <span style="display:block;font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:clamp(30px, 3.4vw, 44px);line-height:1;color:#e0392a;">€3,250</span>
+          </span>
+          <span style="flex-shrink:0;width:32px;height:32px;border-radius:50%;border:1px solid rgba(245,239,232,0.35);display:flex;align-items:center;justify-content:center;font-size:18px;line-height:1;color:#e0392a;">{{ icon3 }}</span>
+        </button>
+        <sc-if value="{{ open3 }}" hint-placeholder-val="{{ false }}">
+        <div style="padding:2px clamp(12px, 2.2vw, 26px) 30px clamp(24px, 4vw, 56px);">
+          
+          <div style="display:inline-flex;align-items:center;gap:10px;margin-bottom:18px;padding:9px 16px;border-radius:999px;background:rgba(245,239,232,0.06);border:1px solid #e0392a;font-size:12.5px;font-weight:800;letter-spacing:0.8px;text-transform:uppercase;color:#e0392a;"><span style="font-size:15px;line-height:1;">&#8593;</span>Everything in Standard, plus</div>
+          <div style="font-size:11px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:#e0392a;margin-bottom:16px;">What&rsquo;s included</div>
+          <div class="lv-incl-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:12px 40px;max-width:900px;">
+            <div style="display:flex;gap:12px;align-items:flex-start;font-size:15.5px;line-height:1.55;color:#c9beb5;">
+              <span style="color:#e0392a;font-weight:800;flex-shrink:0;">&#10003;</span><span>Two or more shoot days, as many locations as the story needs</span>
+            </div>
+            <div style="display:flex;gap:12px;align-items:flex-start;font-size:15.5px;line-height:1.55;color:#c9beb5;">
+              <span style="color:#e0392a;font-weight:800;flex-shrink:0;">&#10003;</span><span>Full pre-production: script, voiceover script, storyboards and shot lists</span>
+            </div>
+            <div style="display:flex;gap:12px;align-items:flex-start;font-size:15.5px;line-height:1.55;color:#c9beb5;">
+              <span style="color:#e0392a;font-weight:800;flex-shrink:0;">&#10003;</span><span>A hero film plus a set of shorter cuts, one per platform</span>
+            </div>
+            <div style="display:flex;gap:12px;align-items:flex-start;font-size:15.5px;line-height:1.55;color:#c9beb5;">
+              <span style="color:#e0392a;font-weight:800;flex-shrink:0;">&#10003;</span><span>Drone footage included as standard, no add-on</span>
+            </div>
+            <div style="display:flex;gap:12px;align-items:flex-start;font-size:15.5px;line-height:1.55;color:#c9beb5;">
+              <span style="color:#e0392a;font-weight:800;flex-shrink:0;">&#10003;</span><span>Photography stills captured alongside the video</span>
+            </div>
+            <div style="display:flex;gap:12px;align-items:flex-start;font-size:15.5px;line-height:1.55;color:#c9beb5;">
+              <span style="color:#e0392a;font-weight:800;flex-shrink:0;">&#10003;</span><span>A professional voiceover artist where the film calls for one</span>
+            </div>
+            <div style="display:flex;gap:12px;align-items:flex-start;font-size:15.5px;line-height:1.55;color:#c9beb5;">
+              <span style="color:#e0392a;font-weight:800;flex-shrink:0;">&#10003;</span><span>Interviews and testimonials filmed with proper sound</span>
+            </div>
+            <div style="display:flex;gap:12px;align-items:flex-start;font-size:15.5px;line-height:1.55;color:#c9beb5;">
+              <span style="color:#e0392a;font-weight:800;flex-shrink:0;">&#10003;</span><span>A website build or refresh, with the film built into it</span>
+            </div>
+            <div style="display:flex;gap:12px;align-items:flex-start;font-size:15.5px;line-height:1.55;color:#c9beb5;">
+              <span style="color:#e0392a;font-weight:800;flex-shrink:0;">&#10003;</span><span>Ongoing content and maintenance support after delivery</span>
+            </div>
+            <div style="display:flex;gap:12px;align-items:flex-start;font-size:15.5px;line-height:1.55;color:#c9beb5;">
+              <span style="color:#e0392a;font-weight:800;flex-shrink:0;">&#10003;</span><span>Priority scheduling and a named delivery date</span>
+            </div>
+          </div>
+          <a href="#quote-form" style="display:inline-block;margin-top:24px;padding:13px 26px;border-radius:999px;background:#e0392a;color:#0d0b0a;font-weight:800;font-size:13.5px;letter-spacing:0.4px;text-transform:uppercase;">Get Full Package quoted</a>
+        </div>
+        </sc-if>
+      </div>
+    </div>
+    <p style="font-size:13.5px;color:#7d716a;margin:20px auto 0;text-align:center;font-weight:600;max-width:620px;">Every price is a starting point, not a fixed quote. Days, locations and how much writing the project needs all move the number.</p>
+  </section>
+
+  <section id="quote-form" style="padding:64px clamp(20px, 6vw, 56px) 40px;">
+    <div class="lv-quote-grid" style="display:grid;grid-template-columns:minmax(0, 1fr) 360px;gap:clamp(28px, 5vw, 64px);align-items:start;max-width:1240px;margin:0 auto;">
+
+      <div>
+        <sc-if value="{{ notSubmitted }}" hint-placeholder-val="{{ true }}">
+        <form onSubmit="{{ onSubmit }}" action="https://api.web3forms.com/submit" method="POST" style="display:flex;flex-direction:column;gap:22px;">
+          <input type="hidden" name="access_key" value="8efdcbd8-e73a-4152-9d8c-58f4e229af8a">
+          <input type="hidden" name="subject" value="New quote request from lukewarmvolcano.com">
+          <input type="hidden" name="from_name" value="Lukewarm Volcano website">
+          <input type="checkbox" name="botcheck" tabindex="-1" aria-hidden="true" style="display:none;">
+          <div>
+            <span style="font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#ff5a1f;">Prefer to write it down?</span>
+            <h2 style="font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:44px;margin:14px 0 0;text-transform:uppercase;line-height:1;">Send Me The Details</h2>
+          </div>
+
+          <div class="lv-form-row" style="display:grid;grid-template-columns:1fr 1fr;gap:18px;">
+            <label style="display:flex;flex-direction:column;gap:8px;">
+              <span style="font-size:12px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:#c9beb5;">Your name</span>
+              <input type="text" name="name" required style="background:rgba(245,239,232,0.04);border:1px solid rgba(245,239,232,0.16);border-radius:12px;padding:15px 16px;font-size:15.5px;color:#f5efe8;">
+            </label>
+            <label style="display:flex;flex-direction:column;gap:8px;">
+              <span style="font-size:12px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:#c9beb5;">Business</span>
+              <input type="text" name="business" style="background:rgba(245,239,232,0.04);border:1px solid rgba(245,239,232,0.16);border-radius:12px;padding:15px 16px;font-size:15.5px;color:#f5efe8;">
+            </label>
+            <label style="display:flex;flex-direction:column;gap:8px;">
+              <span style="font-size:12px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:#c9beb5;">Email</span>
+              <input type="email" name="email" required style="background:rgba(245,239,232,0.04);border:1px solid rgba(245,239,232,0.16);border-radius:12px;padding:15px 16px;font-size:15.5px;color:#f5efe8;">
+            </label>
+            <label style="display:flex;flex-direction:column;gap:8px;">
+              <span style="font-size:12px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:#c9beb5;">Phone</span>
+              <input type="tel" name="phone" style="background:rgba(245,239,232,0.04);border:1px solid rgba(245,239,232,0.16);border-radius:12px;padding:15px 16px;font-size:15.5px;color:#f5efe8;">
+            </label>
+          </div>
+
+          <label style="display:flex;flex-direction:column;gap:8px;">
+            <span style="font-size:12px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:#c9beb5;">What&rsquo;s the video for?</span>
+            <textarea name="project" rows="4" required placeholder="A new product, a rebrand, a venue that photographs badly, an event coming up&hellip;" style="background:rgba(245,239,232,0.04);border:1px solid rgba(245,239,232,0.16);border-radius:12px;padding:15px 16px;font-size:15.5px;color:#f5efe8;resize:vertical;"></textarea>
+          </label>
+
+          <div class="lv-form-row" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;">
+            <label style="display:flex;flex-direction:column;gap:8px;">
+              <span style="font-size:12px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:#c9beb5;">Rough budget</span>
+              <select name="budget" style="background:#171110;border:1px solid rgba(245,239,232,0.16);border-radius:12px;padding:15px 16px;font-size:15.5px;color:#f5efe8;">
+                <option>Not sure yet</option>
+                <option>Under &euro;650</option>
+                <option>&euro;650 to &euro;1,200</option>
+                <option>&euro;1,200 to &euro;3,250</option>
+                <option>&euro;3,250 and up</option>
+              </select>
+            </label>
+            <label style="display:flex;flex-direction:column;gap:8px;">
+              <span style="font-size:12px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:#c9beb5;">Timeline</span>
+              <select name="timeline" style="background:#171110;border:1px solid rgba(245,239,232,0.16);border-radius:12px;padding:15px 16px;font-size:15.5px;color:#f5efe8;">
+                <option>No fixed date</option>
+                <option>Within a month</option>
+                <option>One to three months</option>
+                <option>Later in the year</option>
+              </select>
+            </label>
+            <label style="display:flex;flex-direction:column;gap:8px;">
+              <span style="font-size:12px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:#c9beb5;">Location</span>
+              <input type="text" name="location" placeholder="Town or county" style="background:rgba(245,239,232,0.04);border:1px solid rgba(245,239,232,0.16);border-radius:12px;padding:15px 16px;font-size:15.5px;color:#f5efe8;">
+            </label>
+          </div>
+
+          <div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-top:6px;">
+            <button type="submit" disabled="{{ sending }}" class="lv-molten-btn" style="padding:18px 38px;border-radius:999px;font-family:'Manrope',sans-serif;font-weight:800;font-size:16px;opacity:{{ buttonOpacity }};"><span>{{ buttonLabel }}</span></button>
+            <div style="font-size:13.5px;color:#a89b93;font-weight:600;">Straight to David. Every enquiry gets a reply, usually the same day.</div>
+          </div>
+          <sc-if value="{{ failed }}" hint-placeholder-val="{{ false }}">
+            <div style="border:1px solid rgba(255,90,31,0.5);border-radius:12px;background:rgba(224,54,26,0.12);padding:18px 20px;font-size:15px;line-height:1.6;color:#f5efe8;">
+              That didn&rsquo;t send. Rather than lose it, email the details to <a href="mailto:david@lukewarmvolcano.com">david@lukewarmvolcano.com</a> or ring <a href="tel:0834704688">083-4704-688</a>.
+            </div>
+          </sc-if>
+        </form>
+        </sc-if>
+
+        <sc-if value="{{ submitted }}" hint-placeholder-val="{{ false }}">
+        <div style="border:1px solid rgba(255,90,31,0.45);border-radius:20px;background:linear-gradient(160deg, #1e1411, #171110);padding:40px 36px;">
+          <span style="font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#ff5a1f;">Received</span>
+          <h2 style="font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:44px;margin:14px 0 18px;text-transform:uppercase;line-height:1;">Got It &mdash; Thanks</h2>
+          <p style="font-size:17px;line-height:1.65;color:#c9beb5;margin:0 0 24px;max-width:520px;">I&rsquo;ll read it properly and come back with a price and a rough plan for how I&rsquo;d shoot it. If it&rsquo;s urgent, ring me instead.</p>
+          <div style="display:flex;gap:14px;flex-wrap:wrap;">
+            <a href="tel:0834704688" class="lv-molten-btn" style="padding:16px 30px;border-radius:999px;font-weight:800;font-size:15px;"><span>Call 083-4704-688</span></a>
+            <a href="../videos/" style="padding:16px 30px;border:1px solid rgba(245,239,232,0.3);color:#f5efe8;border-radius:999px;font-weight:700;font-size:15px;">Watch Some Videos</a>
+          </div>
+        </div>
+        </sc-if>
+      </div>
+
+      <aside style="display:flex;flex-direction:column;gap:1px;background:rgba(245,239,232,0.1);border:1px solid rgba(245,239,232,0.1);border-radius:20px;overflow:hidden;">
+        <div style="background:#0d0b0a;padding:26px 26px 22px;">
+          <div style="font-size:12px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:#ff5a1f;">What happens next</div>
+        </div>
+        <div style="background:#0d0b0a;padding:24px 26px;">
+          <div style="font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:30px;color:#ff5a1f;line-height:1;">01</div>
+          <div style="font-size:17px;font-weight:800;margin:10px 0 6px;">A quick call</div>
+          <div style="font-size:14.5px;line-height:1.6;color:#a89b93;">Fifteen minutes to work out what the film actually needs to do.</div>
+        </div>
+        <div style="background:#0d0b0a;padding:24px 26px;">
+          <div style="font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:30px;color:#ff5a1f;line-height:1;">02</div>
+          <div style="font-size:17px;font-weight:800;margin:10px 0 6px;">A written quote</div>
+          <div style="font-size:14.5px;line-height:1.6;color:#a89b93;">Fixed price, itemised, with the shoot days set out in plain English.</div>
+        </div>
+        <div style="background:#0d0b0a;padding:24px 26px;">
+          <div style="font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:30px;color:#ff5a1f;line-height:1;">03</div>
+          <div style="font-size:17px;font-weight:800;margin:10px 0 6px;">The prep</div>
+          <div style="font-size:14.5px;line-height:1.6;color:#a89b93;">Script, shotlist, storyboards and gear checks, all done before shoot day.</div>
+        </div>
+        <div style="background:#0d0b0a;padding:24px 26px;display:flex;flex-direction:column;gap:12px;">
+          <div style="font-size:12px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:#ff5a1f;">Rather talk?</div>
+          <a href="tel:0834704688" style="display:flex;align-items:center;gap:14px;color:#f5efe8;">
+            <span style="width:40px;height:40px;border-radius:50%;background:#ff5a1f;display:flex;align-items:center;justify-content:center;color:#0d0b0a;font-weight:800;flex-shrink:0;">&#9742;</span>
+            <span><span style="display:block;font-size:12.5px;color:#a89b93;">Call</span><span style="display:block;font-weight:700;font-size:16.5px;">083-4704-688</span></span>
+          </a>
+          <a href="mailto:david@lukewarmvolcano.com" style="display:flex;align-items:center;gap:14px;color:#f5efe8;">
+            <span style="width:40px;height:40px;border-radius:50%;background:#ff5a1f;display:flex;align-items:center;justify-content:center;color:#0d0b0a;font-weight:800;flex-shrink:0;">&#9993;</span>
+            <span style="min-width:0;"><span style="display:block;font-size:12.5px;color:#a89b93;">Email</span><span style="display:block;font-weight:700;font-size:16.5px;overflow-wrap:anywhere;">david@lukewarmvolcano.com</span></span>
+          </a>
+        </div>
+      </aside>
+
+    </div>
+  </section>
+
+  <section style="padding:32px clamp(20px, 6vw, 56px) 80px;text-align:center;position:relative;overflow:hidden;">
+    <div style="position:absolute;inset:0;background:radial-gradient(50% 60% at 50% 40%, rgba(255,90,31,0.14), transparent 70%);"></div>
+    <div style="position:relative;z-index:1;">
+      <h2 style="font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:clamp(38px, 6vw, 64px);margin:0 0 20px;text-transform:uppercase;line-height:1;">Ready To <span style="color:#ff5a1f;">Erupt</span>?</h2>
+      <p style="font-size:18px;color:#c9beb5;max-width:480px;margin:0 auto 34px;">Your story&rsquo;s been simmering long enough. Let&rsquo;s turn up the heat and get it in front of the people who need to see it.</p>
+      <a href="#quote-form" class="lv-molten-btn" style="display:inline-block;padding:18px 34px;border-radius:999px;font-weight:800;font-size:16px;"><span>Get Your Free Quote</span></a>
+    </div>
+  </section>
+
+  </main>
+
+  <footer style="background-color:#ff5a1f;background-image:linear-gradient(135deg, #ff5a1f, #d8451c);color:#170f0c;padding:56px clamp(20px, 6vw, 56px) 28px;position:relative;z-index:1;overflow:hidden;clip-path:polygon(0% 1.2%, 5% 0.2%, 10% 1.8%, 16% 0.4%, 22% 1.6%, 28% 0.3%, 34% 1.4%, 40% 0.1%, 46% 1.9%, 52% 0.5%, 58% 1.5%, 64% 0.2%, 70% 2%, 76% 0.4%, 82% 1.5%, 88% 0.1%, 94% 1.7%, 100% 0.5%, 100% 100%, 0% 100%);">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap;padding-top:20px;margin-bottom:40px;">
+      <h2 style="font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:clamp(44px, 7vw, 88px);line-height:0.95;margin:0;text-transform:uppercase;max-width:700px;">Ready To Erupt? Let&rsquo;s Talk.</h2>
+      <a href="mailto:david@lukewarmvolcano.com" style="flex-shrink:0;max-width:100%;padding:20px 40px;background:#170f0c;color:#f5efe8;border-radius:999px;font-weight:800;font-size:17px;overflow-wrap:anywhere;text-align:center;">david@lukewarmvolcano.com</a>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(160px, 1fr));gap:40px;margin-bottom:40px;">
+      <div>
+        <div style="font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:24px;margin-bottom:14px;">LUKEWARM VOLCANO</div>
+        <p style="font-size:14.5px;line-height:1.6;color:#2b160d;max-width:280px;font-weight:600;">Video production studio serving Kilrush, County Clare, and all of Ireland.</p>
+      </div>
+      <div>
+        <div style="font-weight:800;font-size:14px;text-transform:uppercase;letter-spacing:1px;margin-bottom:16px;color:#170f0c;">Navigate</div>
+        <div style="display:flex;flex-direction:column;gap:10px;font-size:14.5px;font-weight:700;">
+          <a href="../videos/" style="color:#170f0c;">Videos</a>
+          <a href="../services/" style="color:#170f0c;">Services</a>
+          <a href="../clients/" style="color:#170f0c;">Clients</a>
+          <a href="../about/" style="color:#170f0c;">About</a>
+          <a href="../privacy/" style="color:#170f0c;">Privacy</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-weight:800;font-size:14px;text-transform:uppercase;letter-spacing:1px;margin-bottom:16px;color:#170f0c;">Contact</div>
+        <div style="display:flex;flex-direction:column;gap:10px;font-size:14.5px;font-weight:700;">
+          <a href="tel:0834704688" style="color:#170f0c;">083-4704-688</a>
+          <a href="mailto:david@lukewarmvolcano.com" style="color:#170f0c;overflow-wrap:anywhere;">david@lukewarmvolcano.com</a>
+          <span style="color:#2b160d;">Kilrush, Co. Clare</span>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;padding-top:22px;border-top:2px solid rgba(23,15,12,0.25);font-size:13px;color:#2b160d;font-weight:700;">
+      <span>&copy; Lukewarm Volcano 2026</span>
+      <div style="display:flex;gap:20px;">
+        <a href="https://www.facebook.com/lukewarmvolcano/" style="color:#170f0c;">Facebook</a>
+        <a href="https://www.instagram.com/lukewarmvolcano/" style="color:#170f0c;">Instagram</a>
+        <a href="https://www.youtube.com/channel/UC3s_6P0831NwYad0yUSnlsw" style="color:#170f0c;">YouTube</a>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { sent: false, sending: false, failed: false, openTier: 2 };
+  tier(i) {
+    const open = this.state.openTier === i;
+    return { open, icon: open ? '\u2212' : '+', toggle: () => this.setState(s => ({ openTier: s.openTier === i ? -1 : i })) };
+  }
+  renderVals() {
+    const t0 = this.tier(0), t1 = this.tier(1), t2 = this.tier(2), t3 = this.tier(3);
+    return {
+      open0: t0.open, icon0: t0.icon, toggle0: t0.toggle,
+      open1: t1.open, icon1: t1.icon, toggle1: t1.toggle,
+      open2: t2.open, icon2: t2.icon, toggle2: t2.toggle,
+      open3: t3.open, icon3: t3.icon, toggle3: t3.toggle,
+      submitted: this.state.sent,
+      notSubmitted: !this.state.sent,
+      sending: this.state.sending,
+      failed: this.state.failed,
+      buttonLabel: this.state.sending ? 'Sending\u2026' : 'Send It Over',
+      buttonOpacity: this.state.sending ? 0.6 : 1,
+      onSubmit: (e) => {
+        e.preventDefault();
+        const form = e.target;
+        this.setState({ sending: true, failed: false });
+        fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { Accept: 'application/json' }
+        })
+          .then(r => r.json())
+          .then(d => {
+            if (d && d.success) this.setState({ sent: true, sending: false });
+            else this.setState({ sending: false, failed: true });
+          })
+          .catch(() => this.setState({ sending: false, failed: true }));
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>
